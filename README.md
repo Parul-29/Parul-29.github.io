@@ -1,2 +1,4 @@
-# Parul-29.github.io
+# Parul Inamdar Portfolio
+
+Static GitHub Pages profile for Parul Inamdar.
 
