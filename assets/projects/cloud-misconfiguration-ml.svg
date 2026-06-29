@@ -1,0 +1,57 @@
+<svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdf4ff"/>
+      <stop offset="100%" stop-color="#eff6ff"/>
+    </linearGradient>
+    <linearGradient id="bar1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#8b5cf620"/>
+    </linearGradient>
+    <linearGradient id="bar2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#06b6d420"/>
+    </linearGradient>
+    <linearGradient id="bar3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#10b98120"/>
+    </linearGradient>
+    <filter id="s6" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#8b5cf615"/>
+    </filter>
+    <pattern id="grid5" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#8b5cf610" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="320" height="220" fill="url(#bg5)"/>
+  <rect width="320" height="220" fill="url(#grid5)"/>
+  <rect x="16" y="24" width="136" height="120" rx="8" fill="white" stroke="#e5e7eb" stroke-width="1.5" filter="url(#s6)"/>
+  <text x="84" y="37" text-anchor="middle" fill="#6b7280" font-size="8" font-weight="500">ROC Curve</text>
+  <line x1="32" y1="130" x2="140" y2="130" stroke="#e5e7eb" stroke-width="1.2"/>
+  <line x1="32" y1="44" x2="32" y2="130" stroke="#e5e7eb" stroke-width="1.2"/>
+  <line x1="32" y1="130" x2="140" y2="44" stroke="#d1d5db" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M32 130 Q38 88 60 62 Q85 42 140 44" stroke="#8b5cf6" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M32 130 Q38 88 60 62 Q85 42 140 44 L140 130 Z" fill="#8b5cf610"/>
+  <rect x="48" y="88" width="58" height="30" rx="5" fill="#fdf4ff" stroke="#8b5cf630" stroke-width="1"/>
+  <text x="77" y="100" text-anchor="middle" fill="#7c3aed" font-size="13" font-weight="800">0.9344</text>
+  <text x="77" y="111" text-anchor="middle" fill="#9ca3af" font-size="7">ROC-AUC</text>
+  <text x="86" y="142" text-anchor="middle" fill="#9ca3af" font-size="7">False Positive Rate</text>
+  <text x="22" y="88" text-anchor="middle" fill="#9ca3af" font-size="7" transform="rotate(-90,22,88)">True Positive Rate</text>
+  <rect x="168" y="24" width="136" height="120" rx="8" fill="white" stroke="#e5e7eb" stroke-width="1.5" filter="url(#s6)"/>
+  <text x="236" y="37" text-anchor="middle" fill="#6b7280" font-size="8" font-weight="500">Model Comparison</text>
+  <rect x="186" y="50" width="30" height="72" rx="4" fill="url(#bar1)"/>
+  <text x="201" y="46" text-anchor="middle" fill="#7c3aed" font-size="7.5" font-weight="700">0.934</text>
+  <text x="201" y="133" text-anchor="middle" fill="#6b7280" font-size="7">XGB</text>
+  <rect x="226" y="60" width="30" height="62" rx="4" fill="url(#bar2)"/>
+  <text x="241" y="56" text-anchor="middle" fill="#0891b2" font-size="7.5" font-weight="700">0.912</text>
+  <text x="241" y="133" text-anchor="middle" fill="#6b7280" font-size="7">RF</text>
+  <rect x="266" y="76" width="30" height="46" rx="4" fill="url(#bar3)"/>
+  <text x="281" y="72" text-anchor="middle" fill="#059669" font-size="7.5" font-weight="700">0.871</text>
+  <text x="281" y="133" text-anchor="middle" fill="#6b7280" font-size="7">LR</text>
+  <rect x="16" y="158" width="88" height="22" rx="5" fill="white" stroke="#ff990050" stroke-width="1.5"/>
+  <text x="60" y="172" text-anchor="middle" fill="#d97706" font-size="9" font-weight="500">AWS</text>
+  <rect x="116" y="158" width="88" height="22" rx="5" fill="white" stroke="#0078d450" stroke-width="1.5"/>
+  <text x="160" y="172" text-anchor="middle" fill="#0078d4" font-size="9" font-weight="500">Azure</text>
+  <rect x="216" y="158" width="88" height="22" rx="5" fill="white" stroke="#34a85350" stroke-width="1.5"/>
+  <text x="260" y="172" text-anchor="middle" fill="#34a853" font-size="9" font-weight="500">GCP</text>
+</svg>

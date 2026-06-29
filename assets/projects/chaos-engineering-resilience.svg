@@ -1,0 +1,55 @@
+<svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0fdf4"/>
+      <stop offset="100%" stop-color="#fefce8"/>
+    </linearGradient>
+    <filter id="s3" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#10b98120"/>
+    </filter>
+    <pattern id="grid2" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#10b98110" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="320" height="220" fill="url(#bg2)"/>
+  <rect width="320" height="220" fill="url(#grid2)"/>
+
+  <rect x="18" y="32" width="76" height="54" rx="8" fill="white" stroke="#10b981" stroke-width="2" filter="url(#s3)"/>
+  <text x="56" y="52" text-anchor="middle" fill="#10b981" font-size="9" font-weight="600">Service A</text>
+  <text x="56" y="66" text-anchor="middle" fill="#6b7280" font-size="8">healthy</text>
+  <circle cx="56" cy="76" r="4" fill="#10b981">
+    <animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <rect x="122" y="32" width="76" height="54" rx="8" fill="white" stroke="#ef4444" stroke-width="2" filter="url(#s3)"/>
+  <text x="160" y="52" text-anchor="middle" fill="#ef4444" font-size="9" font-weight="600">Service B</text>
+  <path d="M155 61 L165 71 M165 61 L155 71" stroke="#ef4444" stroke-width="2.4" stroke-linecap="round"/>
+  <text x="160" y="80" text-anchor="middle" fill="#ef4444" font-size="7">FAILED</text>
+
+  <rect x="226" y="32" width="76" height="54" rx="8" fill="white" stroke="#f59e0b" stroke-width="2" filter="url(#s3)"/>
+  <text x="264" y="52" text-anchor="middle" fill="#f59e0b" font-size="9" font-weight="600">Service C</text>
+  <path d="M264 60 L272 73 H256 Z" fill="none" stroke="#f59e0b" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M264 64 V69" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="264" cy="71" r="1" fill="#f59e0b"/>
+  <text x="264" y="82" text-anchor="middle" fill="#f59e0b" font-size="7">DEGRADED</text>
+
+  <path d="M158 17 L150 31 H158 L156 42 L170 26 H162 Z" fill="#ef4444" filter="url(#s3)"/>
+
+  <rect x="18" y="108" width="86" height="36" rx="7" fill="white" stroke="#06b6d4" stroke-width="1.8" filter="url(#s3)"/>
+  <text x="61" y="122" text-anchor="middle" fill="#06b6d4" font-size="9" font-weight="600">Retry</text>
+  <text x="61" y="135" text-anchor="middle" fill="#9ca3af" font-size="8">3x backoff</text>
+  <rect x="117" y="108" width="86" height="36" rx="7" fill="white" stroke="#8b5cf6" stroke-width="1.8" filter="url(#s3)"/>
+  <text x="160" y="122" text-anchor="middle" fill="#8b5cf6" font-size="9" font-weight="600">Circuit Breaker</text>
+  <text x="160" y="135" text-anchor="middle" fill="#9ca3af" font-size="8">OPEN</text>
+  <rect x="216" y="108" width="86" height="36" rx="7" fill="white" stroke="#10b981" stroke-width="1.8" filter="url(#s3)"/>
+  <text x="259" y="122" text-anchor="middle" fill="#10b981" font-size="9" font-weight="600">Health Check</text>
+  <text x="259" y="135" text-anchor="middle" fill="#10b981" font-size="8">OK</text>
+
+  <path d="M56 86 L56 102 L61 102 L61 108" stroke="#06b6d430" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <path d="M160 86 L160 108" stroke="#8b5cf630" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <path d="M264 86 L264 102 L259 102 L259 108" stroke="#10b98130" stroke-width="1.5" stroke-dasharray="3,2"/>
+
+  <rect x="18" y="160" width="284" height="30" rx="5" fill="white" fill-opacity="0.7" stroke="#e5e7eb" stroke-width="1"/>
+  <polyline points="28,182 55,178 82,185 109,170 136,173 163,162 190,166 217,158 244,155 292,150" stroke="#10b981" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="28,185 82,188 136,180 190,175 244,170 292,167" stroke="#06b6d4" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+</svg>

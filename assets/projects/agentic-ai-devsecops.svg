@@ -1,0 +1,68 @@
+<svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#faf7ff"/>
+      <stop offset="100%" stop-color="#f0ebff"/>
+    </linearGradient>
+    <filter id="s1" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#8b5cf620"/>
+    </filter>
+    <filter id="s2" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#8b5cf630"/>
+    </filter>
+    <linearGradient id="orb1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+    <pattern id="grid1" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#8b5cf610" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="320" height="220" fill="url(#bg1)"/>
+  <rect width="320" height="220" fill="url(#grid1)"/>
+  <circle cx="160" cy="105" r="30" fill="url(#orb1)" filter="url(#s1)" opacity="0.9"/>
+  <circle cx="160" cy="105" r="22" fill="none" stroke="#ffffff40" stroke-width="1.5"/>
+  <text x="160" y="100" text-anchor="middle" fill="white" font-size="11" font-weight="700" font-family="monospace">AI</text>
+  <path d="M148 108 L172 108 M155 113 L165 113" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+  <circle cx="160" cy="105" r="48" fill="none" stroke="#8b5cf620" stroke-width="1.5" stroke-dasharray="3,5"/>
+
+  <circle cx="160" cy="48" r="14" fill="white" stroke="#06b6d4" stroke-width="1.8" filter="url(#s2)"/>
+  <path d="M162 37 L153 51 H160 L157 61 L168 47 H161 Z" fill="#06b6d4"/>
+
+  <circle cx="208" cy="72" r="14" fill="white" stroke="#10b981" stroke-width="1.8" filter="url(#s2)"/>
+  <circle cx="204" cy="69" r="5" fill="none" stroke="#10b981" stroke-width="2"/>
+  <path d="M208 73 L214 79" stroke="#10b981" stroke-width="2" stroke-linecap="round"/>
+
+  <circle cx="208" cy="138" r="14" fill="white" stroke="#f59e0b" stroke-width="1.8" filter="url(#s2)"/>
+  <path d="M208 128 L217 132 V139 C217 145 213 149 208 151 C203 149 199 145 199 139 V132 Z" fill="none" stroke="#f59e0b" stroke-width="1.8" stroke-linejoin="round"/>
+
+  <circle cx="160" cy="162" r="14" fill="white" stroke="#ef4444" stroke-width="1.8" filter="url(#s2)"/>
+  <path d="M160 151 L170 169 H150 Z" fill="none" stroke="#ef4444" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M160 157 V164" stroke="#ef4444" stroke-width="1.8" stroke-linecap="round"/>
+  <circle cx="160" cy="167" r="1.2" fill="#ef4444"/>
+
+  <circle cx="112" cy="138" r="14" fill="white" stroke="#8b5cf6" stroke-width="1.8" filter="url(#s2)"/>
+  <path d="M104 139 L110 145 L121 132" fill="none" stroke="#8b5cf6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <circle cx="112" cy="72" r="14" fill="white" stroke="#ec4899" stroke-width="1.8" filter="url(#s2)"/>
+  <path d="M104 79 V72 M112 79 V66 M120 79 V70" stroke="#ec4899" stroke-width="2" stroke-linecap="round"/>
+
+  <line x1="160" y1="75" x2="160" y2="62" stroke="#8b5cf640" stroke-width="1.5" stroke-dasharray="3,3">
+    <animate attributeName="stroke-dashoffset" from="0" to="-12" dur="1s" repeatCount="indefinite"/>
+  </line>
+  <line x1="178" y1="90" x2="194" y2="79" stroke="#8b5cf640" stroke-width="1.5" stroke-dasharray="3,3">
+    <animate attributeName="stroke-dashoffset" from="0" to="-12" dur="1.4s" repeatCount="indefinite"/>
+  </line>
+  <line x1="178" y1="120" x2="194" y2="131" stroke="#8b5cf640" stroke-width="1.5" stroke-dasharray="3,3">
+    <animate attributeName="stroke-dashoffset" from="0" to="-12" dur="0.9s" repeatCount="indefinite"/>
+  </line>
+  <line x1="160" y1="135" x2="160" y2="148" stroke="#8b5cf640" stroke-width="1.5" stroke-dasharray="3,3">
+    <animate attributeName="stroke-dashoffset" from="0" to="-12" dur="1.2s" repeatCount="indefinite"/>
+  </line>
+  <line x1="142" y1="120" x2="126" y2="131" stroke="#8b5cf640" stroke-width="1.5" stroke-dasharray="3,3">
+    <animate attributeName="stroke-dashoffset" from="0" to="-12" dur="1.1s" repeatCount="indefinite"/>
+  </line>
+  <line x1="142" y1="90" x2="126" y2="79" stroke="#8b5cf640" stroke-width="1.5" stroke-dasharray="3,3">
+    <animate attributeName="stroke-dashoffset" from="0" to="-12" dur="0.8s" repeatCount="indefinite"/>
+  </line>
+</svg>
