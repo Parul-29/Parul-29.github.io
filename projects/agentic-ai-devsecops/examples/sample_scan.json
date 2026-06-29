@@ -1,0 +1,17 @@
+{
+  "repository": "Parul-29/sample-service",
+  "branch": "main",
+  "commit_sha": "abc123",
+  "changed_files": [
+    "app/main.py",
+    "requirements.txt",
+    "infra/main.tf",
+    ".github/workflows/ci.yml"
+  ],
+  "source_snapshot": {
+    "app/main.py": "import subprocess\nsubprocess.call(user_input, shell=True)\n",
+    "requirements.txt": "django==2.2.0\nrequests==2.19.0\n",
+    "infra/main.tf": "resource \"aws_s3_bucket\" \"logs\" {\n  acl = \"public-read\"\n}\nresource \"aws_security_group_rule\" \"ssh\" {\n  cidr_blocks = [\"0.0.0.0/0\"]\n}\n",
+    ".github/workflows/ci.yml": "name: ci\non: [push]\njobs:\n  test:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n"
+  }
+}
