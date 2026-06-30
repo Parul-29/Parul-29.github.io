@@ -1,0 +1,37 @@
+{
+  "title": "Checkout API latency resilience",
+  "target": {
+    "service": "checkout-api",
+    "environment": "staging",
+    "namespace": "commerce",
+    "replicas": 4,
+    "criticality": "high"
+  },
+  "failure_type": "latency_injection",
+  "duration_seconds": 300,
+  "blast_radius_percent": 30,
+  "hypothesis": {
+    "availability_percent": 99.0,
+    "p95_latency_ms": 500,
+    "error_rate_percent": 1.0,
+    "minimum_healthy_replicas": 2
+  },
+  "guardrails": [
+    {
+      "name": "availability_percent",
+      "threshold": 98.0,
+      "unit": "percent",
+      "abort_on_breach": true
+    },
+    {
+      "name": "error_rate_percent",
+      "threshold": 5.0,
+      "unit": "percent",
+      "abort_on_breach": true
+    }
+  ],
+  "metadata": {
+    "owner": "platform-resilience",
+    "ticket": "RES-101"
+  }
+}

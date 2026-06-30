@@ -1,0 +1,1201 @@
+title,description,category,cloud_provider,severity,is_misconfiguration,public_exposure,privilege_escalation,data_exposure,dos,unencrypted,iam,s3_bucket,ssrf_rce
+,Publicly accessible S3 bucket exposing sensitive data.,Misconfiguration,AWS,55,1,1,0,1,0,0,0,1,0
+,Azure Blob Storage with anonymous read access.,Access Control,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Cloud Function with unauthenticated HTTP trigger.,IAM Misconfiguration,GCP,30,1,1,0,0,0,0,1,0,0
+,Unencrypted AWS Lambda environment variables leaking API keys.,Data Exposure,AWS,50,0,0,0,1,0,1,0,0,0
+,Azure Kubernetes Service (AKS) with default admin credentials.,Authentication,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Compute Engine instance with overly permissive firewall rules.,Network Security,GCP,0,0,0,0,0,0,0,0,0,0
+,AWS EC2 instance with exposed SSH port and weak key.,Access Control,AWS,30,0,1,0,0,0,0,0,0,0
+,Oracle Cloud Object Storage bucket with public write access.,Misconfiguration,Oracle Cloud,30,1,1,0,0,0,0,0,1,0
+,IBM Cloud Kubernetes Service with insecure API server access.,API Security,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba OSS bucket with misconfigured CORS allowing unauthorized access.,Access Control,Alibaba Cloud,0,1,0,0,0,0,0,0,1,0
+,AWS RDS instance with public access enabled.,Network Security,AWS,30,0,1,0,0,0,0,0,0,0
+,Azure Cosmos DB with weak firewall rules.,Network Security,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Pub/Sub with overly permissive IAM bindings.,IAM Misconfiguration,GCP,0,1,0,0,0,0,0,1,0,0
+,AWS IAM user with full administrative privileges.,IAM Misconfiguration,AWS,25,1,0,1,0,0,0,1,0,0
+,Azure Function with anonymous HTTP trigger.,Access Control,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP BigQuery dataset with public access.,Access Control,GCP,30,0,1,0,0,0,0,0,0,0
+,Oracle Cloud Compute instance with default credentials.,Authentication,Oracle Cloud,25,1,0,0,1,0,0,0,0,0
+,IBM Cloud Object Storage with public read ACL.,Misconfiguration,IBM Cloud,30,1,1,0,0,0,0,0,1,0
+,Alibaba ECS instance with exposed RDP port.,Network Security,Alibaba Cloud,30,0,1,0,0,0,0,0,0,0
+,AWS API Gateway with no authentication.,API Security,AWS,0,0,0,0,0,0,0,0,0,0
+,Azure Key Vault with overly permissive access policy.,Access Control,Azure,0,0,0,0,0,0,0,1,0,0
+,GCP Cloud SQL with public IP and weak password.,Authentication,GCP,30,0,1,0,0,0,0,0,0,0
+,AWS SNS topic with public publish permissions.,Access Control,AWS,30,0,1,0,0,0,0,1,0,0
+,Azure Virtual Machine with exposed management ports.,Network Security,Azure,30,0,1,0,0,0,0,0,0,0
+,GCP Service Account with excessive permissions.,IAM Misconfiguration,GCP,0,1,0,0,0,0,0,1,0,0
+,Oracle Cloud Database with public endpoint.,Network Security,Oracle Cloud,30,0,1,0,0,0,0,0,0,0
+,IBM Cloud Functions with no authentication.,Access Control,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba RAM user with full access policy.,IAM Misconfiguration,Alibaba Cloud,0,1,0,0,0,0,0,1,0,0
+,AWS DynamoDB with open read/write permissions.,Access Control,AWS,0,0,0,0,0,0,0,1,0,0
+,Azure Event Hub with public access.,Network Security,Azure,30,0,1,0,0,0,0,0,0,0
+,GCP Cloud Storage bucket with legacy ACLs.,Misconfiguration,GCP,0,1,0,0,0,0,0,0,1,0
+,AWS CloudTrail with disabled logging.,Monitoring,AWS,0,0,0,0,0,0,0,0,0,0
+,Azure App Service with weak TLS version.,Encryption,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Kubernetes Engine with no network policy.,Network Security,GCP,0,0,0,0,0,0,0,1,0,0
+,Oracle Cloud File Storage with public share.,Access Control,Oracle Cloud,30,0,1,0,0,0,0,0,0,0
+,IBM Cloud VPC with open ingress rules.,Network Security,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba ApsaraDB with public access.,Network Security,Alibaba Cloud,30,0,1,0,0,0,0,0,0,0
+,AWS Elastic Beanstalk with outdated runtime.,Patch Management,AWS,0,0,0,0,0,0,0,0,0,0
+,Azure Service Bus with shared access key exposure.,Data Exposure,Azure,25,0,0,0,1,0,0,0,0,0
+,GCP Dataflow with public pipeline access.,Access Control,GCP,30,0,1,0,0,0,0,0,1,0
+,AWS SQS queue with open permissions.,Access Control,AWS,0,0,0,0,0,0,0,1,0,0
+,Azure Logic Apps with unauthenticated endpoint.,API Security,Azure,30,0,1,0,0,0,0,0,0,0
+,GCP Cloud Run with public invocation.,Access Control,GCP,30,0,1,0,0,0,0,0,0,0
+,Oracle Cloud Load Balancer with no SSL.,Encryption,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,IBM Cloud Databases with weak encryption.,Encryption,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Function Compute with public trigger.,Access Control,Alibaba Cloud,30,0,1,0,0,0,0,0,0,0
+,AWS ECS with exposed task definition secrets.,Data Exposure,AWS,55,0,1,0,1,0,0,0,0,0
+,Azure Data Lake with public access.,Access Control,Azure,30,0,1,0,0,0,0,0,0,0
+,GCP Cloud Composer with open Airflow UI.,Access Control,GCP,0,0,0,0,0,0,0,0,0,0
+,AWS Redshift with public access.,Network Security,AWS,30,0,1,0,0,0,0,0,0,0
+,AWS IAM role with pass-role privilege escalation.,IAM Misconfiguration,AWS,25,1,0,1,0,0,0,1,0,0
+,Azure SQL Database with no encryption at rest.,Encryption,Azure,25,0,0,0,0,0,1,0,0,0
+,GCP Cloud Build with public trigger access.,Access Control,GCP,30,0,1,0,0,0,0,0,0,0
+,Oracle Cloud VPN with weak encryption protocol.,Encryption,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,IBM Cloud IAM with overly broad service access.,IAM Misconfiguration,IBM Cloud,0,1,0,0,0,0,0,1,0,0
+,Alibaba Cloud ECS with no security group rules.,Network Security,Alibaba Cloud,0,0,0,0,0,0,0,0,0,0
+,AWS KMS key with public access policy.,Access Control,AWS,30,0,1,0,0,0,0,1,0,0
+,Azure Redis Cache with public access enabled.,Network Security,Azure,30,0,1,0,0,0,0,0,0,0
+,GCP Cloud DNS with open zone access.,Access Control,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud Block Volume with no encryption.,Encryption,Oracle Cloud,25,0,0,0,0,0,1,0,0,0
+,IBM Cloud Log Analysis with public endpoint.,Network Security,IBM Cloud,30,0,1,0,0,0,0,0,0,0
+,Alibaba Cloud VPC with open routing table.,Network Security,Alibaba Cloud,0,0,0,0,0,0,0,0,0,0
+,AWS EKS with public API server endpoint.,Network Security,AWS,30,0,1,0,0,0,0,0,0,0
+,Azure API Management with no authentication.,API Security,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Cloud Scheduler with open job access.,Access Control,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud Identity with weak MFA policy.,Authentication,Oracle Cloud,0,0,0,0,0,0,0,1,0,0
+,IBM Cloud Security Group with open ports.,Network Security,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud SLB with HTTP instead of HTTPS.,Encryption,Alibaba Cloud,0,0,0,0,0,0,0,0,0,0
+,AWS CloudFormation with hardcoded secrets.,Data Exposure,AWS,25,0,0,0,1,0,0,0,0,0
+,Azure Synapse Analytics with public access.,Network Security,Azure,30,0,1,0,0,0,0,0,0,0
+,GCP Cloud Functions with outdated runtime.,Patch Management,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud API Gateway with no rate limiting.,API Security,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with exposed dashboard.,Access Control,IBM Cloud,30,0,1,0,0,0,0,0,0,0
+,Alibaba Cloud OSS with no versioning enabled.,Data Protection,Alibaba Cloud,0,0,0,0,0,0,0,0,1,0
+,AWS Fargate with excessive task role permissions.,IAM Misconfiguration,AWS,0,1,0,0,0,0,0,1,0,0
+,Azure Machine Learning with public workspace.,Access Control,Azure,30,0,1,0,0,0,0,0,0,0
+,GCP Cloud Monitoring with public dashboard.,Access Control,GCP,30,0,1,0,0,0,0,0,0,0
+,Oracle Cloud Object Storage with no logging.,Monitoring,Oracle Cloud,0,0,0,0,0,0,0,0,1,0
+,IBM Cloud Activity Tracker disabled.,Monitoring,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud RDS with weak password policy.,Authentication,Alibaba Cloud,0,0,0,0,0,0,0,1,0,0
+,AWS Glue with public data catalog access.,Access Control,AWS,30,0,1,0,0,0,0,0,0,0
+,Azure Stream Analytics with no encryption.,Encryption,Azure,25,0,0,0,0,0,1,0,0,0
+,GCP Cloud Armor with no security policy.,Network Security,GCP,0,0,0,0,0,0,0,1,0,0
+,Oracle Cloud Compute with outdated OS image.,Patch Management,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,IBM Cloud Flow Logs disabled.,Monitoring,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with no disk encryption.,Encryption,Alibaba Cloud,0,0,0,0,0,0,0,0,0,0
+,AWS ElastiCache with no AUTH token.,Authentication,AWS,0,0,0,0,0,0,0,0,0,0
+,Azure Databricks with public cluster access.,Access Control,Azure,30,0,1,0,0,0,0,0,0,0
+,GCP Cloud VPN with weak pre-shared key.,Encryption,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud Functions with public invoke.,Access Control,Oracle Cloud,30,0,1,0,0,0,0,0,0,0
+,IBM Cloud Object Storage with no encryption.,Encryption,IBM Cloud,25,0,0,0,0,0,1,0,1,0
+,Alibaba Cloud CDN with no HTTPS enforcement.,Encryption,Alibaba Cloud,0,0,0,0,0,0,0,0,0,0
+,AWS CodeBuild with public build logs.,Data Exposure,AWS,55,0,1,0,1,0,0,0,0,0
+,Azure Cognitive Services with open API key.,Data Exposure,Azure,25,0,0,0,1,0,0,0,0,0
+,GCP Cloud Spanner with no backup policy.,Data Protection,GCP,0,0,0,0,0,0,0,1,0,0
+,Oracle Cloud VCN with no flow logs.,Monitoring,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with no pod security policy.,Security Policy,IBM Cloud,0,0,0,0,0,0,0,1,0,0
+,Alibaba Cloud ECS with public snapshot access.,Access Control,Alibaba Cloud,30,0,1,0,0,0,0,0,0,0
+,AWS S3 bucket with no MFA delete enabled.,Data Protection,AWS,0,0,0,0,0,0,0,0,1,0
+,Azure Blob Storage with no soft delete.,Data Protection,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Compute Engine with no shielded VMs.,Security Policy,GCP,0,0,0,0,0,0,0,1,0,0
+,Oracle Cloud Database with no audit logging.,Monitoring,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,IBM Cloud VPC with no encryption.,Encryption,IBM Cloud,25,0,0,0,0,0,1,0,0,0
+,Alibaba Cloud RAM with no password rotation.,Authentication,Alibaba Cloud,0,0,0,0,0,0,0,1,0,0
+,AWS Lambda with no VPC configuration.,Network Security,AWS,0,0,0,0,0,0,0,0,0,0
+,Azure Kubernetes with no RBAC enabled.,Access Control,Azure,0,0,0,0,0,0,0,1,0,0
+,GCP Cloud Storage with no uniform bucket-level access.,Access Control,GCP,0,0,0,0,0,0,0,0,1,0
+,Oracle Cloud Load Balancer with no WAF.,Security Policy,Oracle Cloud,0,0,0,0,0,0,0,1,0,0
+,IBM Cloud Functions with no logging.,Monitoring,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud OSS with no lifecycle policy.,Data Protection,Alibaba Cloud,0,0,0,0,0,0,0,1,1,0
+,AWS RDS with no automated backups.,Data Protection,AWS,0,0,0,0,0,0,0,0,0,0
+,Azure Cosmos DB with no IP filtering.,Network Security,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Pub/Sub with no encryption.,Encryption,GCP,25,0,0,0,0,0,1,0,0,0
+,Oracle Cloud Compute with no boot volume encryption.,Encryption,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,IBM Cloud Object Storage with no bucket lock.,Data Protection,IBM Cloud,0,0,0,0,0,0,0,0,1,0
+,Alibaba Cloud ECS with no monitoring agent.,Monitoring,Alibaba Cloud,0,0,0,0,0,0,0,0,0,0
+,AWS SNS with no encryption.,Encryption,AWS,25,0,0,0,0,0,1,0,0,0
+,Azure Virtual Network with no DDoS protection.,Network Security,Azure,10,0,0,0,0,1,0,0,0,0
+,GCP Cloud SQL with no SSL enforcement.,Encryption,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud File Storage with no encryption.,Encryption,Oracle Cloud,25,0,0,0,0,0,1,0,0,0
+,IBM Cloud VPC with no ACL rules.,Network Security,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud RAM with no MFA.,Authentication,Alibaba Cloud,0,0,0,0,0,0,0,0,0,0
+,AWS API Gateway with no throttling.,API Security,AWS,0,0,0,0,0,0,0,0,0,0
+,Azure Key Vault with no purge protection.,Data Protection,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Service Account with no key rotation.,Authentication,GCP,0,0,0,0,0,0,0,1,0,0
+,Oracle Cloud Identity with no password policy.,Authentication,Oracle Cloud,0,0,0,0,0,0,0,1,0,0
+,IBM Cloud Databases with no backup.,Data Protection,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud SLB with no health checks.,Security Policy,Alibaba Cloud,0,0,0,0,0,0,0,1,0,0
+,AWS ECS with no logging.,Monitoring,AWS,0,0,0,0,0,0,0,0,0,0
+,Azure Data Lake with no encryption.,Encryption,Azure,25,0,0,0,0,0,1,0,0,0
+,GCP Cloud Run with no concurrency limit.,Resource Control,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud API Gateway with no CORS policy.,API Security,Oracle Cloud,0,0,0,0,0,0,0,1,0,0
+,IBM Cloud Kubernetes with no network policy.,Network Security,IBM Cloud,0,0,0,0,0,0,0,1,0,0
+,Alibaba Cloud Function Compute with no VPC.,Network Security,Alibaba Cloud,0,0,0,0,0,0,0,0,0,0
+,AWS Redshift with no encryption.,Encryption,AWS,25,0,0,0,0,0,1,0,0,0
+,Azure Event Hub with no partition key encryption.,Encryption,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP BigQuery with no CMEK encryption.,Encryption,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud Block Volume with no backup policy.,Data Protection,Oracle Cloud,0,0,0,0,0,0,0,1,0,0
+,IBM Cloud Security Advisor disabled.,Monitoring,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud OSS with no access logging.,Monitoring,Alibaba Cloud,0,0,0,0,0,0,0,0,1,0
+,AWS EC2 instance with no IMDSv2 enforcement.,Security Policy,AWS,0,0,0,0,0,0,0,1,0,0
+,Azure Function with no CORS policy.,API Security,Azure,0,0,0,0,0,0,0,1,0,0
+,GCP Kubernetes Engine with legacy authorization enabled.,Authentication,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud Compute with no security list.,Network Security,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,IBM Cloud Object Storage with no retention policy.,Data Protection,IBM Cloud,0,0,0,0,0,0,0,1,1,0
+,Alibaba Cloud ECS with no anti-DDoS protection.,Network Security,Alibaba Cloud,10,0,0,0,0,1,0,0,0,0
+,AWS SQS with no server-side encryption.,Encryption,AWS,0,0,0,0,0,0,0,0,0,0
+,Azure Virtual Machine with no disk encryption.,Encryption,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Cloud Storage with no audit logging.,Monitoring,GCP,0,0,0,0,0,0,0,0,1,0
+,Oracle Cloud Database with no TDE encryption.,Encryption,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,IBM Cloud VPC with no security group.,Network Security,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud RAM with no resource-level permissions.,IAM Misconfiguration,Alibaba Cloud,0,1,0,0,0,0,0,1,0,0
+,AWS DynamoDB with no point-in-time recovery.,Data Protection,AWS,0,0,0,0,0,0,0,0,0,0
+,Azure App Service with no authentication.,Authentication,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Cloud Functions with no memory limit.,Resource Control,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud VCN with no network security group.,Network Security,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with no image security scanning.,Security Policy,IBM Cloud,0,0,0,0,0,0,0,1,0,0
+,Alibaba Cloud OSS with no server-side encryption.,Encryption,Alibaba Cloud,0,0,0,0,0,0,0,0,1,0
+,AWS Lambda with no dead-letter queue.,Monitoring,AWS,0,0,0,0,0,0,0,0,0,0
+,Azure SQL Database with no auditing.,Monitoring,Azure,0,0,0,0,0,0,0,1,0,0
+,GCP Cloud Build with no service account restrictions.,IAM Misconfiguration,GCP,0,1,0,0,0,0,0,1,0,0
+,Oracle Cloud Object Storage with no WORM policy.,Data Protection,Oracle Cloud,0,0,0,0,0,0,0,1,1,0
+,IBM Cloud Functions with no timeout limit.,Resource Control,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud VPC with no flow log.,Monitoring,Alibaba Cloud,0,0,0,0,0,0,0,0,0,0
+,AWS EKS with no pod security standards.,Security Policy,AWS,0,0,0,0,0,0,0,1,0,0
+,Azure API Management with no rate limiting.,API Security,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Cloud DNS with no DNSSEC.,Security Policy,GCP,0,0,0,0,0,0,0,1,0,0
+,Oracle Cloud Identity with no session timeout.,Authentication,Oracle Cloud,0,0,0,0,0,0,0,1,0,0
+,IBM Cloud VPC with no endpoint gateway restrictions.,Network Security,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud RDS with no SSL enforcement.,Encryption,Alibaba Cloud,0,0,0,0,0,0,0,0,0,0
+,AWS CloudTrail with no log file validation.,Monitoring,AWS,0,0,0,0,0,0,0,0,0,0
+,Azure Synapse Analytics with no private endpoint.,Network Security,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Cloud Functions with no ingress settings.,Network Security,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud Load Balancer with no access logging.,Monitoring,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,IBM Cloud Databases with no connection pooling.,Resource Control,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with no auto-scaling limits.,Resource Control,Alibaba Cloud,0,0,0,0,0,0,0,0,0,0
+,AWS Fargate with no resource limits.,Resource Control,AWS,0,0,0,0,0,0,0,0,0,0
+,Azure Machine Learning with no private link.,Network Security,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Cloud Monitoring with no alert policies.,Monitoring,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud Functions with no resource limits.,Resource Control,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,IBM Cloud Object Storage with no CORS restrictions.,API Security,IBM Cloud,0,0,0,0,0,0,0,0,1,0
+,Alibaba Cloud SLB with no session persistence.,Security Policy,Alibaba Cloud,0,0,0,0,0,0,0,1,0,0
+,AWS Glue with no encryption for data at rest.,Encryption,AWS,25,0,0,0,0,0,1,0,0,0
+,Azure Stream Analytics with no private endpoint.,Network Security,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Cloud Armor with no rate limiting.,API Security,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud VCN with no DDoS protection.,Network Security,Oracle Cloud,10,0,0,0,0,1,0,0,0,0
+,IBM Cloud Kubernetes with no audit logging.,Monitoring,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud OSS with no request rate limiting.,API Security,Alibaba Cloud,0,0,0,0,0,0,0,0,1,0
+,AWS CodeBuild with no artifact encryption.,Encryption,AWS,0,0,0,0,0,0,0,0,0,0
+,Azure Cognitive Services with no private endpoint.,Network Security,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Cloud Spanner with no audit logging.,Monitoring,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud API Gateway with no authentication.,API Security,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,IBM Cloud Security Group with no egress rules.,Network Security,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with no backup policy.,Data Protection,Alibaba Cloud,0,0,0,0,0,0,0,1,0,0
+,AWS ElastiCache with no encryption in transit.,Encryption,AWS,25,0,0,0,0,0,1,0,0,0
+,Azure Databricks with no encryption for data at rest.,Encryption,Azure,25,0,0,0,0,0,1,0,0,0
+,GCP Cloud VPN with no logging.,Monitoring,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud File Storage with no access control.,Access Control,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,IBM Cloud Databases with no auto-scaling limits.,Resource Control,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud Function Compute with no logging.,Monitoring,Alibaba Cloud,0,0,0,0,0,0,0,0,0,0
+,AWS IAM policy with wildcard resource permissions.,IAM Misconfiguration,AWS,0,1,0,0,0,0,0,1,1,0
+,Azure Blob Storage with no versioning enabled.,Data Protection,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Compute Engine with no disk encryption.,Encryption,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud Functions with no network isolation.,Network Security,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,IBM Cloud VPC with no subnet ACL.,Network Security,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with no firewall rules.,Network Security,Alibaba Cloud,0,0,0,0,0,0,0,0,0,0
+,AWS RDS with no deletion protection.,Data Protection,AWS,0,0,0,0,0,0,0,0,0,0
+,Azure Key Vault with no soft delete enabled.,Data Protection,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Cloud SQL with no backup configuration.,Data Protection,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud Database with no network access control.,Network Security,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,IBM Cloud Functions with no memory limits.,Resource Control,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud OSS with no access control list.,Access Control,Alibaba Cloud,0,0,0,0,0,0,0,0,1,0
+,AWS API Gateway with no logging enabled.,Monitoring,AWS,0,0,0,0,0,0,0,0,0,0
+,Azure Virtual Network with no network security group.,Network Security,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Cloud Run with no CPU limits.,Resource Control,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud Load Balancer with no rate limiting.,API Security,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with no container runtime security.,Security Policy,IBM Cloud,0,0,0,0,0,0,0,1,0,0
+,Alibaba Cloud RDS with no audit logging.,Monitoring,Alibaba Cloud,0,0,0,0,0,0,0,0,0,0
+,AWS S3 bucket with no access logging.,Monitoring,AWS,0,0,0,0,0,0,0,0,1,0
+,Azure Cosmos DB with no partition key encryption.,Encryption,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Pub/Sub with no message retention policy.,Data Protection,GCP,0,0,0,0,0,0,0,1,0,0
+,Oracle Cloud File Storage with no snapshot policy.,Data Protection,Oracle Cloud,0,0,0,0,0,0,0,1,0,0
+,IBM Cloud VPC with no encryption for volumes.,Encryption,IBM Cloud,25,0,0,0,0,0,1,0,0,0
+,Alibaba Cloud ECS with no instance metadata protection.,Security Policy,Alibaba Cloud,0,0,0,0,0,0,0,1,0,0
+,AWS ECS with no task execution role restrictions.,IAM Misconfiguration,AWS,0,1,0,0,0,0,0,1,0,0
+,Azure Data Lake with no access logging.,Monitoring,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Cloud Composer with no private IP.,Network Security,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud Compute with no secure boot.,Security Policy,Oracle Cloud,0,0,0,0,0,0,0,1,0,0
+,IBM Cloud Databases with no query logging.,Monitoring,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud Function Compute with no timeout.,Resource Control,Alibaba Cloud,0,0,0,0,0,0,0,0,0,0
+,AWS Redshift with no logging enabled.,Monitoring,AWS,0,0,0,0,0,0,0,0,0,0
+,Azure Event Hub with no access control.,Access Control,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP BigQuery with no access control policy.,Access Control,GCP,0,0,0,0,0,0,0,1,0,0
+,Oracle Cloud Object Storage with no encryption.,Encryption,Oracle Cloud,25,0,0,0,0,0,1,0,1,0
+,IBM Cloud Security Group with no ingress rules.,Network Security,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud SLB with no SSL certificate.,Encryption,Alibaba Cloud,0,0,0,0,0,0,0,0,0,0
+,AWS CloudFormation with no stack policy.,Security Policy,AWS,0,0,0,0,0,0,0,1,0,0
+,Azure Synapse Analytics with no encryption.,Encryption,Azure,25,0,0,0,0,0,1,0,0,0
+,GCP Cloud Build with no artifact encryption.,Encryption,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud VPN with no IPSec encryption.,Encryption,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,IBM Cloud Functions with no access control.,Access Control,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with no security monitoring.,Monitoring,Alibaba Cloud,0,0,0,0,0,0,0,0,0,0
+,AWS KMS with no key rotation enabled.,Security Policy,AWS,0,0,0,0,0,0,0,1,0,0
+,Azure Redis Cache with no firewall rules.,Network Security,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Cloud DNS with no logging enabled.,Monitoring,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud Block Volume with no snapshot encryption.,Encryption,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,IBM Cloud VPC with no public gateway restrictions.,Network Security,IBM Cloud,30,0,1,0,0,0,0,0,0,0
+,Alibaba Cloud RDS with no backup encryption.,Encryption,Alibaba Cloud,0,0,0,0,0,0,0,0,0,0
+,AWS SNS with no topic policy.,Access Control,AWS,0,0,0,0,0,0,0,1,0,0
+,Azure Virtual Machine with no security updates.,Patch Management,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Cloud Scheduler with no retry policy.,Security Policy,GCP,0,0,0,0,0,0,0,1,0,0
+,Oracle Cloud Identity with no group-based access control.,Access Control,Oracle Cloud,0,0,0,0,0,0,0,1,0,0
+,IBM Cloud Kubernetes with no encryption for secrets.,Encryption,IBM Cloud,50,0,0,0,1,0,1,0,0,0
+,Alibaba Cloud OSS with no bucket policy.,Access Control,Alibaba Cloud,0,0,0,0,0,0,0,1,1,0
+,AWS Fargate with no logging configuration.,Monitoring,AWS,0,0,0,0,0,0,0,0,0,0
+,Azure Machine Learning with no audit logging.,Monitoring,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Cloud Functions with no environment variable encryption.,Encryption,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud Load Balancer with no health checks.,Security Policy,Oracle Cloud,0,0,0,0,0,0,0,1,0,0
+,IBM Cloud Databases with no access control.,Access Control,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with no anti-malware protection.,Security Policy,Alibaba Cloud,0,0,0,0,0,0,0,1,0,0
+,AWS ElastiCache with no backup policy.,Data Protection,AWS,0,0,0,0,0,0,0,1,0,0
+,Azure Databricks with no private endpoint.,Network Security,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Cloud VPN with no audit logging.,Monitoring,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud File Storage with no versioning.,Data Protection,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,IBM Cloud VPC with no monitoring enabled.,Monitoring,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud Function Compute with no access logging.,Monitoring,Alibaba Cloud,0,0,0,0,0,0,0,0,0,0
+,AWS CodeBuild with no logging enabled.,Monitoring,AWS,0,0,0,0,0,0,0,0,0,0
+,Azure Cognitive Services with no logging.,Monitoring,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Cloud Spanner with no backup encryption.,Encryption,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud API Gateway with no request validation.,API Security,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,IBM Cloud Security Group with no protocol restrictions.,Network Security,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with no disk snapshot policy.,Data Protection,Alibaba Cloud,0,0,0,0,0,0,0,1,0,0
+,AWS S3 bucket with no lifecycle policy.,Data Protection,AWS,0,0,0,0,0,0,0,1,1,0
+,Azure Stream Analytics with no access control.,Access Control,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Cloud Armor with no WAF rules.,Security Policy,GCP,0,0,0,0,0,0,0,1,0,0
+,Oracle Cloud VCN with no route table restrictions.,Network Security,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with no resource quotas.,Resource Control,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud OSS with no data encryption.,Encryption,Alibaba Cloud,0,0,0,0,0,0,0,0,1,0
+,AWS EKS with no network policy enforcement.,Network Security,AWS,0,0,0,0,0,0,0,1,0,0
+,Azure API Management with no subscription key.,Authentication,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Cloud DNS with no zone restrictions.,Access Control,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud Identity with no lockout policy.,Authentication,Oracle Cloud,0,0,0,0,0,0,0,1,0,0
+,IBM Cloud VPC with no flow log encryption.,Encryption,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud RDS with no deletion protection.,Data Protection,Alibaba Cloud,0,0,0,0,0,0,0,0,0,0
+,AWS SNS with no delivery status logging.,Monitoring,AWS,0,0,0,0,0,0,0,0,0,0
+,Azure Virtual Network with no private endpoint.,Network Security,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Cloud SQL with no point-in-time recovery.,Data Protection,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud File Storage with no audit logging.,Monitoring,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,IBM Cloud Databases with no encryption for backups.,Encryption,IBM Cloud,25,0,0,0,0,0,1,0,0,0
+,Alibaba Cloud ECS with no resource monitoring.,Monitoring,Alibaba Cloud,0,0,0,0,0,0,0,0,0,0
+,AWS Lambda with no tracing enabled.,Monitoring,AWS,0,0,0,0,0,0,0,0,0,0
+,Azure Kubernetes with no log analytics.,Monitoring,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Cloud Run with no request timeout.,Resource Control,GCP,0,0,0,0,0,0,0,0,0,0
+,Oracle Cloud Compute with no instance monitoring.,Monitoring,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,IBM Cloud Functions with no concurrency limits.,Resource Control,IBM Cloud,0,0,0,0,0,0,0,0,0,0
+,Alibaba Cloud OSS with no data retention policy.,Data Protection,Alibaba Cloud,0,0,0,0,0,0,0,1,1,0
+,AWS API Gateway with no cache encryption.,Encryption,AWS,0,0,0,0,0,0,0,0,0,0
+,Azure App Service with no HTTPS enforcement.,Encryption,Azure,0,0,0,0,0,0,0,0,0,0
+,GCP Cloud Storage with no object versioning.,Data Protection,GCP,0,0,0,0,0,0,0,0,1,0
+,Oracle Cloud Database with no connection encryption.,Encryption,Oracle Cloud,0,0,0,0,0,0,0,0,0,0
+,AWS IAM role trust policy allowing cross-account privilege escalation.,Privilege Escalation,AWS,25,0,0,1,0,0,0,1,0,0
+,Azure Managed Identity with excessive permissions leading to resource hijacking.,IAM Misconfiguration,Azure,0,1,0,0,0,0,0,1,0,0
+,GCP Service Account impersonation via overly permissive IAM bindings.,Privilege Escalation,GCP,25,0,0,1,0,0,0,1,0,0
+,Oracle Cloud Functions with exposed debug endpoints allowing code injection.,Code Injection,Oracle Cloud,30,0,1,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured webhook allowing pod privilege escalation.,Privilege Escalation,IBM Cloud,25,1,0,1,0,0,0,0,0,0
+,Alibaba Cloud ECS with exposed metadata service allowing SSRF attacks.,Server-Side Request Forgery,Alibaba Cloud,50,0,1,0,0,0,0,0,0,1
+,AWS Lambda function with unvalidated event data leading to code injection.,Code Injection,AWS,0,0,0,0,0,0,0,0,0,0
+,Azure Function with misconfigured CORS allowing cross-origin data exfiltration.,Data Exfiltration,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Run with misconfigured service account allowing privilege escalation.,Privilege Escalation,GCP,25,1,0,1,0,0,0,0,0,0
+,Oracle Cloud VCN with misconfigured route table enabling lateral movement.,Network Security,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Object Storage with misconfigured lifecycle rules exposing deleted data.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,0,1,0
+,Alibaba Cloud SLB with insecure session handling leading to session hijacking.,Session Management,Alibaba Cloud,0,0,0,0,0,0,0,0,0,0
+,AWS API Gateway with misconfigured request validation allowing SQL injection.,Injection,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Cosmos DB with misconfigured partition key allowing data leakage.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Storage with misconfigured signed URLs allowing unauthorized access.,Access Control,GCP,0,1,0,0,0,0,0,0,1,0
+,Oracle Cloud Database with exposed diagnostic data allowing information disclosure.,Data Exposure,Oracle Cloud,55,0,1,0,1,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured admission controller allowing privilege escalation.,Privilege Escalation,IBM Cloud,25,1,0,1,0,0,0,0,0,0
+,Alibaba Cloud RDS with exposed slow query logs leading to data leakage.,Data Exposure,Alibaba Cloud,55,0,1,0,1,0,0,0,0,0
+,AWS S3 bucket with misconfigured event notifications exposing data to external services.,Data Exposure,AWS,25,1,0,0,1,0,0,0,1,0
+,Azure Virtual Machine with exposed serial console allowing privilege escalation.,Privilege Escalation,Azure,55,0,1,1,0,0,0,0,0,0
+,GCP Cloud Functions with misconfigured environment variables exposing secrets.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud Load Balancer with misconfigured backend set allowing DoS attacks.,Denial of Service,Oracle Cloud,10,1,0,0,0,1,0,0,0,0
+,IBM Cloud VPC with misconfigured floating IP allowing unauthorized access.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured user data script enabling remote code execution.,Code Injection,Alibaba Cloud,20,1,0,0,0,0,0,0,0,1
+,AWS EKS with misconfigured cluster role bindings allowing privilege escalation.,Privilege Escalation,AWS,25,1,0,1,0,0,0,1,0,0
+,Azure API Management with exposed management API allowing configuration tampering.,API Security,Azure,30,0,1,0,0,0,0,0,0,0
+,GCP Cloud SQL with exposed binary logs allowing data exposure.,Data Exposure,GCP,55,0,1,0,1,0,0,0,0,0
+,Oracle Cloud Identity with misconfigured federation allowing unauthorized access.,Authentication,Oracle Cloud,0,1,0,0,0,0,0,1,0,0
+,IBM Cloud Functions with misconfigured trigger allowing unauthorized invocation.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud OSS with misconfigured replication allowing data exfiltration.,Data Exfiltration,Alibaba Cloud,0,1,0,0,0,0,0,0,1,0
+,AWS CloudTrail with misconfigured SNS topic allowing log tampering.,Monitoring,AWS,30,1,1,0,0,0,0,0,0,0
+,Azure Synapse Analytics with misconfigured pipeline allowing code execution.,Code Injection,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Build with misconfigured build trigger allowing unauthorized builds.,Access Control,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud Compute with misconfigured instance metadata allowing SSRF.,Server-Side Request Forgery,Oracle Cloud,20,1,0,0,0,0,0,0,0,1
+,IBM Cloud VPC with misconfigured DNS resolution allowing DNS rebinding attacks.,Network Security,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud Function Compute with misconfigured event source allowing unauthorized invocation.,Access Control,Alibaba Cloud,0,1,0,0,0,0,0,0,0,0
+,AWS RDS with misconfigured parameter group allowing insecure connections.,Network Security,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Key Vault with misconfigured access policy allowing secret enumeration.,Data Exposure,Azure,25,1,0,0,1,0,0,1,0,0
+,GCP Pub/Sub with misconfigured subscription allowing message interception.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud File Storage with misconfigured export allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Databases with misconfigured connection string exposing credentials.,Data Exposure,IBM Cloud,55,1,1,0,1,0,0,0,0,0
+,Alibaba Cloud VPC with misconfigured NAT gateway allowing traffic sniffing.,Network Security,Alibaba Cloud,0,1,0,0,0,0,0,0,0,0
+,AWS SQS with misconfigured dead-letter queue exposing sensitive messages.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Event Hub with misconfigured consumer group allowing unauthorized access.,Access Control,Azure,30,1,1,0,0,0,0,0,0,0
+,GCP BigQuery with misconfigured table ACLs allowing data leakage.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud Object Storage with misconfigured pre-authenticated requests allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,0,1,0
+,IBM Cloud Kubernetes with misconfigured network policy allowing lateral movement.,Network Security,IBM Cloud,0,1,0,0,0,0,0,1,0,0
+,Alibaba Cloud ECS with misconfigured auto-scaling policy allowing resource exhaustion.,Denial of Service,Alibaba Cloud,10,1,0,0,0,1,0,1,0,0
+,AWS CloudFormation with misconfigured drift detection exposing configuration changes.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Machine Learning with misconfigured model deployment allowing inference attacks.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Monitoring with misconfigured alert policy allowing silent failures.,Monitoring,GCP,0,1,0,0,0,0,0,1,0,0
+,Oracle Cloud Functions with misconfigured logging exposing sensitive data.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,0,0,0
+,IBM Cloud VPC with misconfigured load balancer allowing traffic interception.,Network Security,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured binlog allowing data exposure.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS Redshift with misconfigured snapshot sharing allowing data leakage.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Data Lake with misconfigured access control allowing privilege escalation.,Privilege Escalation,Azure,25,1,0,1,0,0,0,0,0,0
+,GCP Cloud Composer with misconfigured environment variables exposing secrets.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud VCN with misconfigured security list allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Databases with misconfigured backup policy allowing data loss.,Data Protection,IBM Cloud,0,1,0,0,0,0,0,1,0,0
+,Alibaba Cloud Function Compute with misconfigured runtime allowing code injection.,Code Injection,Alibaba Cloud,0,1,0,0,0,0,0,0,0,0
+,AWS ElastiCache with misconfigured Redis AUTH allowing unauthorized access.,Authentication,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Databricks with misconfigured workspace allowing data exfiltration.,Data Exfiltration,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud VPN with misconfigured routing allowing traffic interception.,Network Security,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud File Storage with misconfigured mount target allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured RBAC allowing privilege escalation.,Privilege Escalation,IBM Cloud,25,1,0,1,0,0,0,1,0,0
+,Alibaba Cloud OSS with misconfigured bucket policy allowing data tampering.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,1,1,0
+,AWS CodeBuild with misconfigured environment variables exposing secrets.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Cognitive Services with misconfigured API key rotation exposing keys.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Spanner with misconfigured audit logs allowing undetected access.,Monitoring,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud API Gateway with misconfigured throttling allowing DoS attacks.,Denial of Service,Oracle Cloud,10,1,0,0,0,1,0,0,0,0
+,IBM Cloud Security Group with misconfigured rules allowing lateral movement.,Network Security,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured snapshot export allowing data leakage.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS S3 bucket with misconfigured encryption rules exposing data.,Encryption,AWS,0,1,0,0,0,0,0,0,1,0
+,Azure Stream Analytics with misconfigured input allowing data injection.,Injection,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Armor with misconfigured rules allowing SQL injection.,Injection,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud VCN with misconfigured NAT gateway allowing traffic sniffing.,Network Security,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured pod security context allowing privilege escalation.,Privilege Escalation,IBM Cloud,25,1,0,1,0,0,0,0,0,0
+,Alibaba Cloud OSS with misconfigured versioning allowing data tampering.,Data Protection,Alibaba Cloud,0,1,0,0,0,0,0,0,1,0
+,AWS Fargate with misconfigured network configuration allowing lateral movement.,Network Security,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure API Management with misconfigured gateway allowing request smuggling.,API Security,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud DNS with misconfigured zone transfer allowing DNS data exposure.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud Identity with misconfigured API key allowing unauthorized access.,Authentication,Oracle Cloud,0,1,0,0,0,0,0,1,0,0
+,IBM Cloud VPC with misconfigured endpoint service allowing unauthorized access.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured replication allowing data exposure.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS SNS with misconfigured topic subscription allowing message interception.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Virtual Network with misconfigured peering allowing lateral movement.,Network Security,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud SQL with misconfigured failover allowing unauthorized access.,Access Control,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud File Storage with misconfigured NFS export allowing data leakage.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,0,0,0
+,IBM Cloud Databases with misconfigured audit policy allowing undetected access.,Monitoring,IBM Cloud,0,1,0,0,0,0,0,1,0,0
+,Alibaba Cloud ECS with misconfigured instance role allowing privilege escalation.,Privilege Escalation,Alibaba Cloud,25,1,0,1,0,0,0,1,0,0
+,AWS Lambda with misconfigured VPC endpoint allowing traffic interception.,Network Security,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Kubernetes with misconfigured service account allowing cluster compromise.,Privilege Escalation,Azure,50,1,0,1,1,0,0,0,0,0
+,GCP Cloud Run with misconfigured IAM policy allowing unauthorized invocation.,Access Control,GCP,0,1,0,0,0,0,0,1,0,0
+,Oracle Cloud Load Balancer with misconfigured listener allowing request smuggling.,API Security,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Functions with misconfigured logging exposing sensitive data.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,0,0,0
+,Alibaba Cloud OSS with misconfigured event notification allowing data exfiltration.,Data Exfiltration,Alibaba Cloud,0,1,0,0,0,0,0,0,1,0
+,AWS API Gateway with misconfigured caching allowing data leakage.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure App Service with misconfigured custom domain allowing subdomain takeover.,Domain Hijacking,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Storage with misconfigured CORS allowing cross-origin data exfiltration.,Data Exfiltration,GCP,0,1,0,0,0,0,0,0,1,0
+,Oracle Cloud Database with misconfigured audit trail allowing undetected access.,Monitoring,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,AWS ECS with misconfigured task definition allowing container breakout.,Privilege Escalation,AWS,25,1,0,1,0,0,0,0,0,0
+,Azure Function with misconfigured trigger allowing unauthorized invocation.,Access Control,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Run with misconfigured concurrency allowing resource exhaustion.,Denial of Service,GCP,10,1,0,0,0,1,0,0,0,0
+,Oracle Cloud Compute with misconfigured user data allowing code injection.,Code Injection,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Object Storage with misconfigured CORS exposing data to unauthorized origins.,Data Exfiltration,IBM Cloud,0,1,0,0,0,0,0,0,1,0
+,Alibaba Cloud SLB with misconfigured health check allowing DoS attacks.,Denial of Service,Alibaba Cloud,10,1,0,0,0,1,0,0,0,0
+,AWS S3 bucket with misconfigured replication allowing data exfiltration.,Data Exfiltration,AWS,0,1,0,0,0,0,0,0,1,0
+,Azure SQL Database with misconfigured firewall allowing unauthorized access.,Access Control,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Functions with misconfigured HTTP trigger allowing unauthorized invocation.,Access Control,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud VCN with misconfigured service gateway allowing lateral movement.,Network Security,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured service account token allowing cluster compromise.,Privilege Escalation,IBM Cloud,25,1,0,1,0,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured parameter group allowing insecure connections.,Network Security,Alibaba Cloud,0,1,0,0,0,0,0,0,0,0
+,AWS API Gateway with misconfigured authorizer allowing unauthorized access.,Authentication,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Cosmos DB with misconfigured role-based access control allowing privilege escalation.,Privilege Escalation,Azure,25,1,0,1,0,0,0,1,0,0
+,GCP Cloud Storage with misconfigured lifecycle rule exposing deleted objects.,Data Exposure,GCP,25,1,0,0,1,0,0,0,1,0
+,Oracle Cloud Database with misconfigured listener allowing SQL injection.,Injection,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Functions with misconfigured namespace allowing unauthorized access.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud OSS with misconfigured bucket ACL allowing data tampering.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,1,0
+,AWS CloudTrail with misconfigured log delivery allowing log tampering.,Monitoring,AWS,30,1,1,0,0,0,0,0,1,0
+,Azure Virtual Machine with misconfigured diagnostics exposing sensitive data.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Functions with misconfigured VPC connector allowing lateral movement.,Network Security,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud Load Balancer with misconfigured path routing allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud VPC with misconfigured subnet allowing unauthorized access.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured security group allowing SSH brute force.,Authentication,Alibaba Cloud,0,1,0,0,0,0,0,0,0,0
+,AWS EKS with misconfigured pod security policy allowing container breakout.,Privilege Escalation,AWS,25,1,0,1,0,0,0,1,0,0
+,Azure API Management with misconfigured backend allowing request forgery.,Server-Side Request Forgery,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud SQL with misconfigured backup allowing data exposure.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud Identity with misconfigured MFA policy allowing bypass.,Authentication,Oracle Cloud,0,1,0,0,0,0,0,1,0,0
+,IBM Cloud Functions with misconfigured package binding allowing unauthorized access.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud OSS with misconfigured lifecycle transition allowing data exposure.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,1,0
+,AWS SNS with misconfigured topic policy allowing unauthorized subscriptions.,Access Control,AWS,0,1,0,0,0,0,0,1,0,0
+,Azure Event Hub with misconfigured capture allowing data exposure.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP BigQuery with misconfigured dataset policy allowing unauthorized access.,Access Control,GCP,0,1,0,0,0,0,0,1,0,0
+,Oracle Cloud Object Storage with misconfigured bucket policy allowing data tampering.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,1,1,0
+,IBM Cloud Kubernetes with misconfigured init container allowing privilege escalation.,Privilege Escalation,IBM Cloud,25,1,0,1,0,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured instance metadata allowing SSRF attacks.,Server-Side Request Forgery,Alibaba Cloud,20,1,0,0,0,0,0,0,0,1
+,AWS CloudFormation with misconfigured parameter allowing code injection.,Code Injection,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Machine Learning with misconfigured endpoint allowing inference attacks.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Monitoring with misconfigured notification channel allowing data leakage.,Data Exposure,GCP,55,1,1,0,1,0,0,0,0,0
+,Oracle Cloud Functions with misconfigured environment variables exposing secrets.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,0,0,0
+,IBM Cloud VPC with misconfigured VPN gateway allowing traffic interception.,Network Security,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured audit log destination allowing data exposure.,Data Exposure,Alibaba Cloud,55,1,1,0,1,0,0,0,1,0
+,AWS Redshift with misconfigured parameter group allowing insecure connections.,Network Security,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Data Lake with misconfigured filesystem ACL allowing data tampering.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Composer with misconfigured Airflow DAG allowing code execution.,Code Injection,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud VCN with misconfigured DNS resolution allowing DNS rebinding attacks.,Network Security,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured webhook timeout allowing DoS attacks.,Denial of Service,IBM Cloud,10,1,0,0,0,1,0,0,0,0
+,Alibaba Cloud OSS with misconfigured event trigger allowing unauthorized invocation.,Access Control,Alibaba Cloud,30,1,1,0,0,0,0,0,0,0
+,AWS S3 bucket with misconfigured versioning exposing deleted objects.,Data Exposure,AWS,25,1,0,0,1,0,0,0,1,0
+,Azure Stream Analytics with misconfigured output allowing data exfiltration.,Data Exfiltration,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Armor with misconfigured XSS protection allowing script injection.,Injection,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud File Storage with misconfigured snapshot allowing data exposure.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,0,0,0
+,IBM Cloud Databases with misconfigured connection pooling allowing resource exhaustion.,Denial of Service,IBM Cloud,10,1,0,0,0,1,0,0,0,0
+,Alibaba Cloud ECS with misconfigured auto-scaling trigger allowing DoS attacks.,Denial of Service,Alibaba Cloud,10,1,0,0,0,1,0,0,0,0
+,AWS ElastiCache with misconfigured cluster mode allowing unauthorized access.,Access Control,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Databricks with misconfigured cluster policy allowing privilege escalation.,Privilege Escalation,Azure,25,1,0,1,0,0,0,1,0,0
+,GCP Cloud VPN with misconfigured IKE policy allowing weak encryption.,Encryption,GCP,0,1,0,0,0,0,0,1,0,0
+,Oracle Cloud Compute with misconfigured boot volume allowing data exposure.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,0,0,0
+,IBM Cloud Functions with misconfigured action sequence allowing code execution.,Code Injection,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud OSS with misconfigured encryption key allowing data exposure.,Encryption,Alibaba Cloud,25,1,0,0,1,0,0,0,1,0
+,AWS CodeBuild with misconfigured source repository allowing code tampering.,Code Injection,AWS,30,1,1,0,0,0,0,0,0,0
+,Azure Cognitive Services with misconfigured endpoint allowing data exfiltration.,Data Exfiltration,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Spanner with misconfigured table schema allowing data tampering.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud API Gateway with misconfigured CORS allowing cross-origin attacks.,Data Exfiltration,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Security Group with misconfigured egress rules allowing data exfiltration.,Data Exfiltration,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured monitoring exposing instance metrics.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS S3 bucket with misconfigured event notification allowing unauthorized actions.,Access Control,AWS,30,1,1,0,0,0,0,0,1,0
+,Azure Virtual Network with misconfigured DDoS protection allowing service disruption.,Denial of Service,Azure,10,1,0,0,0,1,0,0,0,0
+,GCP Cloud DNS with misconfigured DNSSEC allowing domain spoofing.,Domain Hijacking,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud Identity with misconfigured group policy allowing privilege escalation.,Privilege Escalation,Oracle Cloud,25,1,0,1,0,0,0,1,0,0
+,IBM Cloud VPC with misconfigured flow log destination allowing data exposure.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,0,1,0
+,Alibaba Cloud RDS with misconfigured read replica allowing data exposure.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS SNS with misconfigured delivery policy allowing message tampering.,Data Exposure,AWS,25,1,0,0,1,0,0,1,0,0
+,Azure Virtual Machine with misconfigured extension allowing code execution.,Code Injection,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud SQL with misconfigured maintenance window allowing service disruption.,Denial of Service,GCP,10,1,0,0,0,1,0,0,0,0
+,Oracle Cloud File Storage with misconfigured export options allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured liveness probe allowing resource exhaustion.,Denial of Service,IBM Cloud,10,1,0,0,0,1,0,0,0,0
+,Alibaba Cloud OSS with misconfigured bucket logging allowing data exposure.,Data Exposure,Alibaba Cloud,55,1,1,0,1,0,0,0,1,0
+,AWS EKS with misconfigured audit logging exposing cluster activity.,Data Exposure,AWS,55,1,1,0,1,0,0,0,1,0
+,Azure API Management with misconfigured OAuth2 allowing token theft.,Authentication,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Run with misconfigured scaling policy allowing resource exhaustion.,Denial of Service,GCP,10,1,0,0,0,1,0,1,0,0
+,Oracle Cloud Load Balancer with misconfigured SSL policy allowing weak ciphers.,Encryption,Oracle Cloud,0,1,0,0,0,0,0,1,0,0
+,IBM Cloud VPC with misconfigured public gateway allowing unauthorized access.,Access Control,IBM Cloud,30,1,1,0,0,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured maintenance window allowing service disruption.,Denial of Service,Alibaba Cloud,10,1,0,0,0,1,0,0,0,0
+,AWS SNS with misconfigured subscription filter allowing message exposure.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Virtual Network with misconfigured service endpoint allowing data exfiltration.,Data Exfiltration,Azure,30,1,1,0,0,0,0,0,0,0
+,GCP Cloud SQL with misconfigured user privileges allowing privilege escalation.,Privilege Escalation,GCP,25,1,0,1,0,0,0,0,0,0
+,Oracle Cloud File Storage with misconfigured mount options allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Databases with misconfigured backup destination allowing data exposure.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,0,1,0
+,Alibaba Cloud ECS with misconfigured snapshot policy allowing data tampering.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,1,0,0
+,AWS Lambda with misconfigured environment variable allowing code injection.,Code Injection,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Kubernetes with misconfigured pod network allowing lateral movement.,Network Security,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Run with misconfigured environment allowing privilege escalation.,Privilege Escalation,GCP,25,1,0,1,0,0,0,0,0,0
+,Oracle Cloud Load Balancer with misconfigured backend health check allowing DoS attacks.,Denial of Service,Oracle Cloud,10,1,0,0,0,1,0,0,0,0
+,IBM Cloud Functions with misconfigured trigger policy allowing unauthorized invocation.,Access Control,IBM Cloud,0,1,0,0,0,0,0,1,0,0
+,Alibaba Cloud OSS with misconfigured CORS policy allowing data exfiltration.,Data Exfiltration,Alibaba Cloud,0,1,0,0,0,0,0,1,1,0
+,AWS API Gateway with misconfigured throttling allowing DoS attacks.,Denial of Service,AWS,10,1,0,0,0,1,0,0,0,0
+,Azure App Service with misconfigured authentication allowing session hijacking.,Session Management,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Storage with misconfigured bucket policy allowing data tampering.,Data Exposure,GCP,25,1,0,0,1,0,0,1,1,0
+,Oracle Cloud Database with misconfigured TDE key allowing data exposure.,Encryption,Oracle Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS ECS with misconfigured IAM role allowing cross-service privilege escalation.,Privilege Escalation,AWS,25,1,0,1,0,0,0,1,0,0
+,Azure Function with misconfigured blob trigger allowing data tampering.,Data Exposure,Azure,55,1,1,0,1,0,0,0,0,0
+,GCP Cloud Run with misconfigured CPU allocation allowing resource exhaustion.,Denial of Service,GCP,10,1,0,0,0,1,0,0,0,0
+,Oracle Cloud Compute with misconfigured instance principal allowing privilege escalation.,Privilege Escalation,Oracle Cloud,25,1,0,1,0,0,0,1,0,0
+,IBM Cloud Object Storage with misconfigured bucket policy allowing data tampering.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,1,1,0
+,Alibaba Cloud SLB with misconfigured SSL ciphers allowing weak encryption.,Encryption,Alibaba Cloud,0,1,0,0,0,0,0,0,0,0
+,AWS S3 bucket with misconfigured lifecycle policy exposing archived data.,Data Exposure,AWS,25,1,0,0,1,0,0,1,1,0
+,Azure SQL Database with misconfigured auditing policy allowing undetected access.,Monitoring,Azure,0,1,0,0,0,0,0,1,0,0
+,GCP Cloud Functions with misconfigured logging exposing sensitive data.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud VCN with misconfigured subnet allowing lateral movement.,Network Security,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured namespace allowing privilege escalation.,Privilege Escalation,IBM Cloud,50,1,0,1,1,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured encryption key allowing data exposure.,Encryption,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS API Gateway with misconfigured endpoint type allowing unauthorized access.,Access Control,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Cosmos DB with misconfigured firewall allowing unauthorized access.,Access Control,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Storage with misconfigured uniform bucket-level access exposing data.,Data Exposure,GCP,25,1,0,0,1,0,0,0,1,0
+,Oracle Cloud Database with misconfigured backup policy allowing data exposure.,Data Exposure,Oracle Cloud,55,1,1,0,1,0,0,1,1,0
+,IBM Cloud Functions with misconfigured runtime allowing code injection.,Code Injection,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud OSS with misconfigured encryption configuration exposing data.,Encryption,Alibaba Cloud,0,1,0,0,0,0,0,0,1,0
+,AWS CloudTrail with misconfigured encryption allowing log exposure.,Data Exposure,AWS,25,1,0,0,1,0,0,0,1,0
+,Azure Virtual Machine with misconfigured network interface allowing traffic sniffing.,Network Security,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Functions with misconfigured timeout allowing resource exhaustion.,Denial of Service,GCP,10,1,0,0,0,1,0,0,0,0
+,Oracle Cloud Load Balancer with misconfigured session persistence allowing session hijacking.,Session Management,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud VPC with misconfigured security group allowing unauthorized access.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured disk encryption exposing data.,Encryption,Alibaba Cloud,0,1,0,0,0,0,0,0,0,0
+,AWS EKS with misconfigured network policy allowing lateral movement.,Network Security,AWS,0,1,0,0,0,0,0,1,0,0
+,Azure API Management with misconfigured rate limiting allowing DoS attacks.,Denial of Service,Azure,10,1,0,0,0,1,0,0,0,0
+,GCP Cloud SQL with misconfigured SSL/TLS settings allowing insecure connections.,Encryption,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud Identity with misconfigured password policy allowing weak credentials.,Authentication,Oracle Cloud,25,1,0,0,1,0,0,1,0,0
+,IBM Cloud Functions with misconfigured environment variables exposing secrets.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,0,0,0
+,Alibaba Cloud OSS with misconfigured bucket tagging allowing unauthorized access.,Access Control,Alibaba Cloud,0,1,0,0,0,0,0,0,1,0
+,AWS SNS with misconfigured topic attributes allowing message tampering.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Event Hub with misconfigured SAS key allowing unauthorized access.,Access Control,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP BigQuery with misconfigured query cache allowing data leakage.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud Object Storage with misconfigured versioning exposing deleted objects.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,0,1,0
+,IBM Cloud Kubernetes with misconfigured readiness probe allowing resource exhaustion.,Denial of Service,IBM Cloud,10,1,0,0,0,1,0,0,0,0
+,Alibaba Cloud ECS with misconfigured user data allowing code injection.,Code Injection,Alibaba Cloud,0,1,0,0,0,0,0,0,0,0
+,AWS CloudFormation with misconfigured output exposing sensitive data.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Machine Learning with misconfigured dataset allowing data leakage.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Monitoring with misconfigured dashboard exposing sensitive metrics.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud Functions with misconfigured trigger allowing unauthorized invocation.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud VPC with misconfigured NAT gateway allowing traffic sniffing.,Network Security,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured log rotation exposing sensitive data.,Data Exposure,Alibaba Cloud,55,1,1,0,1,0,0,0,1,0
+,AWS Redshift with misconfigured audit logging exposing query data.,Data Exposure,AWS,55,1,1,0,1,0,0,0,1,0
+,Azure Data Lake with misconfigured role assignment allowing privilege escalation.,Privilege Escalation,Azure,25,1,0,1,0,0,0,1,0,0
+,GCP Cloud Composer with misconfigured web server allowing unauthorized access.,Access Control,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud VCN with misconfigured route table allowing traffic interception.,Network Security,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured resource quota allowing resource exhaustion.,Denial of Service,IBM Cloud,10,1,0,0,0,1,0,0,0,0
+,Alibaba Cloud OSS with misconfigured bucket encryption exposing data.,Encryption,Alibaba Cloud,0,1,0,0,0,0,0,0,1,0
+,AWS S3 bucket with misconfigured bucket logging exposing access patterns.,Data Exposure,AWS,55,1,1,0,1,0,0,0,1,0
+,Azure Stream Analytics with misconfigured job allowing code injection.,Code Injection,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Armor with misconfigured rate limiting allowing DoS attacks.,Denial of Service,GCP,10,1,0,0,0,1,0,0,0,0
+,Oracle Cloud File Storage with misconfigured export policy allowing data tampering.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,1,0,0
+,IBM Cloud Databases with misconfigured failover allowing unauthorized access.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured instance role allowing privilege escalation.,Privilege Escalation,Alibaba Cloud,25,1,0,1,0,0,0,1,0,0
+,AWS ElastiCache with misconfigured snapshot allowing data exposure.,Data Exposure,AWS,55,1,1,0,1,0,0,0,1,0
+,Azure Databricks with misconfigured notebook allowing code execution.,Code Injection,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud VPN with misconfigured routing table allowing traffic interception.,Network Security,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud Compute with misconfigured metadata service allowing SSRF attacks.,Server-Side Request Forgery,Oracle Cloud,20,1,0,0,0,0,0,0,0,1
+,IBM Cloud Functions with misconfigured sequence allowing unauthorized invocation.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud OSS with misconfigured lifecycle rule allowing data exposure.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,1,0
+,AWS CodeBuild with misconfigured buildspec allowing code injection.,Code Injection,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Cognitive Services with misconfigured logging exposing sensitive data.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Spanner with misconfigured backup allowing data exposure.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud API Gateway with misconfigured authentication allowing unauthorized access.,Authentication,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Security Group with misconfigured rules allowing traffic interception.,Network Security,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured snapshot export allowing data leakage.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS S3 bucket with misconfigured event trigger allowing unauthorized invocation.,Access Control,AWS,30,1,1,0,0,0,0,0,1,0
+,Azure Virtual Network with misconfigured subnet delegation allowing privilege escalation.,Privilege Escalation,Azure,25,1,0,1,0,0,0,0,0,0
+,GCP Cloud DNS with misconfigured record set allowing domain hijacking.,Domain Hijacking,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud Identity with misconfigured role allowing privilege escalation.,Privilege Escalation,Oracle Cloud,25,1,0,1,0,0,0,1,0,0
+,IBM Cloud VPC with misconfigured endpoint gateway allowing unauthorized access.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured replica allowing data tampering.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS SNS with misconfigured subscription endpoint allowing data exfiltration.,Data Exfiltration,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Virtual Machine with misconfigured diagnostic agent allowing code execution.,Code Injection,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud SQL with misconfigured database flags allowing privilege escalation.,Privilege Escalation,GCP,25,1,0,1,0,0,0,0,0,0
+,Oracle Cloud File Storage with misconfigured NFS options allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured pod affinity allowing resource exhaustion.,Denial of Service,IBM Cloud,10,1,0,0,0,1,0,0,0,0
+,Alibaba Cloud OSS with misconfigured bucket notification allowing data exfiltration.,Data Exfiltration,Alibaba Cloud,0,1,0,0,0,0,0,0,1,0
+,AWS EKS with misconfigured logging configuration exposing sensitive data.,Data Exposure,AWS,55,1,1,0,1,0,0,0,1,0
+,Azure API Management with misconfigured caching allowing data leakage.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Run with misconfigured memory allocation allowing resource exhaustion.,Denial of Service,GCP,10,1,0,0,0,1,0,0,0,0
+,Oracle Cloud Load Balancer with misconfigured access log exposing sensitive data.,Data Exposure,Oracle Cloud,55,1,1,0,1,0,0,0,1,0
+,IBM Cloud VPC with misconfigured floating IP allowing unauthorized access.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured monitoring exposing database metrics.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS SNS with misconfigured topic policy allowing unauthorized access.,Access Control,AWS,0,1,0,0,0,0,0,1,0,0
+,Azure Virtual Network with misconfigured network security group allowing lateral movement.,Network Security,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud SQL with misconfigured binary logging allowing data exposure.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud File Storage with misconfigured snapshot policy allowing data exposure.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,1,0,0
+,IBM Cloud Databases with misconfigured audit logging exposing sensitive data.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,0,1,0
+,Alibaba Cloud ECS with misconfigured auto-scaling policy allowing resource exhaustion.,Denial of Service,Alibaba Cloud,10,1,0,0,0,1,0,1,0,0
+,AWS Lambda with misconfigured logging exposing sensitive data.,Data Exposure,AWS,55,1,1,0,1,0,0,0,1,0
+,Azure Kubernetes with misconfigured cluster role allowing privilege escalation.,Privilege Escalation,Azure,25,1,0,1,0,0,0,1,0,0
+,GCP Cloud Run with misconfigured IAM binding allowing unauthorized access.,Access Control,GCP,0,1,0,0,0,0,0,1,0,0
+,Oracle Cloud Load Balancer with misconfigured health check allowing DoS attacks.,Denial of Service,Oracle Cloud,10,1,0,0,0,1,0,0,0,0
+,IBM Cloud Functions with misconfigured logging destination exposing sensitive data.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,0,1,0
+,Alibaba Cloud OSS with misconfigured bucket policy allowing data exfiltration.,Data Exfiltration,Alibaba Cloud,0,1,0,0,0,0,0,1,1,0
+,AWS API Gateway with misconfigured logging exposing sensitive data.,Data Exposure,AWS,55,1,1,0,1,0,0,0,1,0
+,Azure App Service with misconfigured CORS allowing data exfiltration.,Data Exfiltration,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Storage with misconfigured bucket ACL allowing data tampering.,Data Exposure,GCP,25,1,0,0,1,0,0,0,1,0
+,Oracle Cloud Database with misconfigured audit policy allowing undetected access.,Monitoring,Oracle Cloud,0,1,0,0,0,0,0,1,0,0
+,AWS ECS with misconfigured network mode allowing container-to-host communication.,Network Security,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Function with misconfigured managed identity allowing privilege escalation.,Privilege Escalation,Azure,25,1,0,1,0,0,0,0,0,0
+,GCP Cloud Run with misconfigured service account allowing unauthorized access.,Access Control,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud Compute with misconfigured firewall rule allowing SSH access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Object Storage with misconfigured lifecycle rule exposing archived data.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,0,1,0
+,Alibaba Cloud SLB with misconfigured listener allowing protocol downgrade attacks.,Encryption,Alibaba Cloud,0,1,0,0,0,0,0,0,0,0
+,AWS S3 bucket with misconfigured CORS policy allowing data exfiltration.,Data Exfiltration,AWS,0,1,0,0,0,0,0,1,1,0
+,Azure SQL Database with misconfigured TDE allowing data exposure.,Encryption,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Functions with misconfigured environment variables exposing secrets.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud VCN with misconfigured NAT gateway allowing traffic interception.,Network Security,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured RBAC allowing privilege escalation.,Privilege Escalation,IBM Cloud,25,1,0,1,0,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured parameter group exposing sensitive data.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS API Gateway with misconfigured request validator allowing injection attacks.,Injection,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Cosmos DB with misconfigured partition key allowing data leakage.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Storage with misconfigured bucket versioning exposing deleted objects.,Data Exposure,GCP,25,1,0,0,1,0,0,0,1,0
+,Oracle Cloud Database with misconfigured network security group allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Functions with misconfigured webhook allowing unauthorized invocation.,Access Control,IBM Cloud,30,1,1,0,0,0,0,0,0,0
+,Alibaba Cloud OSS with misconfigured access log exposing request metadata.,Data Exposure,Alibaba Cloud,55,1,1,0,1,0,0,0,1,0
+,AWS CloudTrail with misconfigured SNS notification allowing log tampering.,Monitoring,AWS,30,1,1,0,0,0,0,0,0,0
+,Azure Virtual Machine with misconfigured boot diagnostics exposing sensitive data.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Functions with misconfigured retry policy allowing resource exhaustion.,Denial of Service,GCP,10,1,0,0,0,1,0,1,0,0
+,Oracle Cloud Load Balancer with misconfigured rate limiting allowing DoS attacks.,Denial of Service,Oracle Cloud,10,1,0,0,0,1,0,0,0,0
+,IBM Cloud VPC with misconfigured subnet ACL allowing unauthorized access.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured security group allowing RDP brute force.,Authentication,Alibaba Cloud,0,1,0,0,0,0,0,0,0,0
+,AWS EKS with misconfigured pod security context allowing privilege escalation.,Privilege Escalation,AWS,25,1,0,1,0,0,0,0,0,0
+,Azure API Management with misconfigured CORS allowing cross-origin attacks.,Data Exfiltration,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud SQL with misconfigured backup retention exposing old data.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud Identity with misconfigured group membership allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,1,0,0
+,IBM Cloud Functions with misconfigured timeout allowing resource exhaustion.,Denial of Service,IBM Cloud,10,1,0,0,0,1,0,0,0,0
+,Alibaba Cloud OSS with misconfigured bucket policy allowing data tampering.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,1,1,0
+,AWS SNS with misconfigured delivery retry policy allowing message loss.,Data Loss,AWS,0,1,0,0,0,0,0,1,0,0
+,Azure Event Hub with misconfigured partition allowing data leakage.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP BigQuery with misconfigured table ACL allowing unauthorized access.,Access Control,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud Object Storage with misconfigured lifecycle rule exposing archived data.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,0,1,0
+,IBM Cloud Kubernetes with misconfigured pod disruption budget allowing DoS attacks.,Denial of Service,IBM Cloud,10,1,0,0,0,1,0,0,0,0
+,Alibaba Cloud ECS with misconfigured instance metadata exposing sensitive data.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS CloudFormation with misconfigured stack policy allowing unauthorized updates.,Access Control,AWS,0,1,0,0,0,0,0,1,0,0
+,Azure Machine Learning with misconfigured model deployment allowing inference attacks.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Monitoring with misconfigured alert policy exposing sensitive data.,Data Exposure,GCP,25,1,0,0,1,0,0,1,0,0
+,Oracle Cloud Functions with misconfigured logging exposing sensitive data.,Data Exposure,Oracle Cloud,55,1,1,0,1,0,0,0,1,0
+,IBM Cloud VPC with misconfigured VPN allowing weak encryption.,Encryption,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured backup destination exposing data.,Data Exposure,Alibaba Cloud,55,1,1,0,1,0,0,0,1,0
+,AWS Redshift with misconfigured snapshot policy allowing data exposure.,Data Exposure,AWS,55,1,1,0,1,0,0,1,1,0
+,Azure Data Lake with misconfigured encryption exposing data.,Encryption,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Composer with misconfigured environment allowing code injection.,Code Injection,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud VCN with misconfigured security list allowing lateral movement.,Network Security,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured webhook allowing unauthorized access.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud OSS with misconfigured bucket versioning exposing deleted objects.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,1,0
+,AWS S3 bucket with misconfigured notification allowing unauthorized actions.,Access Control,AWS,30,1,1,0,0,0,0,0,1,0
+,Azure Stream Analytics with misconfigured input allowing data tampering.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Armor with misconfigured SQL injection protection allowing attacks.,Injection,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud File Storage with misconfigured access policy allowing data exposure.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,1,0,0
+,IBM Cloud Databases with misconfigured connection string exposing credentials.,Data Exposure,IBM Cloud,55,1,1,0,1,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured auto-scaling rule allowing DoS attacks.,Denial of Service,Alibaba Cloud,10,1,0,0,0,1,0,0,0,0
+,AWS ElastiCache with misconfigured access control allowing unauthorized access.,Access Control,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Databricks with misconfigured workspace allowing unauthorized access.,Access Control,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud VPN with misconfigured peer allowing traffic interception.,Network Security,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud Compute with misconfigured user data allowing code injection.,Code Injection,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Functions with misconfigured namespace allowing code execution.,Code Injection,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud OSS with misconfigured bucket ACL allowing data exposure.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,1,0
+,AWS CodeBuild with misconfigured environment variables exposing secrets.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Cognitive Services with misconfigured endpoint authentication allowing unauthorized access.,Authentication,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Spanner with misconfigured IAM policy allowing unauthorized access.,Access Control,GCP,0,1,0,0,0,0,0,1,0,0
+,Oracle Cloud API Gateway with misconfigured rate limiting allowing DoS attacks.,Denial of Service,Oracle Cloud,10,1,0,0,0,1,0,0,0,0
+,IBM Cloud Security Group with misconfigured ingress rules allowing unauthorized access.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured monitoring policy exposing metrics.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,1,0,0
+,AWS S3 bucket with misconfigured encryption exposing data.,Encryption,AWS,0,1,0,0,0,0,0,0,1,0
+,Azure Virtual Network with misconfigured peering allowing lateral movement.,Network Security,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud DNS with misconfigured zone allowing DNS spoofing.,Domain Hijacking,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud Identity with misconfigured policy allowing privilege escalation.,Privilege Escalation,Oracle Cloud,25,1,0,1,0,0,0,1,0,0
+,IBM Cloud VPC with misconfigured flow logs exposing network traffic.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,0,1,0
+,Alibaba Cloud RDS with misconfigured read-only user allowing data tampering.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS SNS with misconfigured subscription policy allowing data exfiltration.,Data Exfiltration,AWS,0,1,0,0,0,0,0,1,0,0
+,Azure Virtual Machine with misconfigured extension allowing privilege escalation.,Privilege Escalation,Azure,25,1,0,1,0,0,0,0,0,0
+,GCP Cloud SQL with misconfigured audit logging exposing sensitive queries.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud File Storage with misconfigured export set allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured resource limits allowing resource exhaustion.,Denial of Service,IBM Cloud,10,1,0,0,0,1,0,0,0,0
+,Alibaba Cloud OSS with misconfigured bucket notification exposing data.,Data Exfiltration,Alibaba Cloud,30,1,1,0,0,0,0,0,1,0
+,AWS EKS with misconfigured cluster logging exposing sensitive data.,Data Exposure,AWS,55,1,1,0,1,0,0,0,1,0
+,Azure API Management with misconfigured subscription key allowing unauthorized access.,Access Control,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Run with misconfigured concurrency allowing DoS attacks.,Denial of Service,GCP,10,1,0,0,0,1,0,0,0,0
+,Oracle Cloud Load Balancer with misconfigured SSL certificate allowing weak encryption.,Encryption,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud VPC with misconfigured public gateway allowing traffic interception.,Network Security,IBM Cloud,30,1,1,0,0,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured maintenance policy allowing DoS attacks.,Denial of Service,Alibaba Cloud,10,1,0,0,0,1,0,1,0,0
+,AWS SNS with misconfigured message filtering exposing sensitive data.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Virtual Network with misconfigured service endpoint allowing data exfiltration.,Data Exfiltration,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud SQL with misconfigured user permissions allowing privilege escalation.,Privilege Escalation,GCP,25,1,0,1,0,0,0,1,0,0
+,Oracle Cloud File Storage with misconfigured mount target allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Databases with misconfigured backup policy exposing data.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,1,1,0
+,Alibaba Cloud ECS with misconfigured snapshot policy allowing data exposure.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,1,0,0
+,AWS Lambda with misconfigured function policy allowing unauthorized invocation.,Access Control,AWS,0,1,0,0,0,0,0,1,0,0
+,Azure Kubernetes with misconfigured network policy allowing unauthorized access.,Access Control,Azure,0,1,0,0,0,0,0,1,0,0
+,GCP Cloud Run with misconfigured environment variable exposing secrets.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud Load Balancer with misconfigured backend set allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Functions with misconfigured trigger allowing unauthorized invocation.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud OSS with misconfigured CORS allowing data exfiltration.,Data Exfiltration,Alibaba Cloud,0,1,0,0,0,0,0,0,1,0
+,AWS API Gateway with misconfigured throttling allowing DoS attacks.,Denial of Service,AWS,10,1,0,0,0,1,0,0,0,0
+,Azure App Service with misconfigured authentication allowing session hijacking.,Session Management,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Storage with misconfigured bucket policy allowing data exposure.,Data Exposure,GCP,25,1,0,0,1,0,0,1,1,0
+,Oracle Cloud Database with misconfigured encryption key exposing data.,Encryption,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,AWS ECS with misconfigured task definition allowing container breakout.,Privilege Escalation,AWS,25,1,0,1,0,0,0,0,0,0
+,Azure Function with misconfigured CORS policy allowing cross-origin data leakage.,Data Exfiltration,Azure,25,1,0,0,1,0,0,1,0,0
+,GCP Cloud Run with misconfigured autoscaling allowing resource exhaustion.,Denial of Service,GCP,10,1,0,0,0,1,0,0,0,0
+,Oracle Cloud Compute with misconfigured instance metadata exposing credentials.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,0,0,0
+,IBM Cloud Object Storage with misconfigured versioning exposing deleted objects.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,0,1,0
+,Alibaba Cloud SLB with misconfigured health check allowing DoS attacks.,Denial of Service,Alibaba Cloud,10,1,0,0,0,1,0,0,0,0
+,AWS S3 bucket with misconfigured bucket policy allowing data tampering.,Data Exposure,AWS,25,1,0,0,1,0,0,1,1,0
+,Azure SQL Database with misconfigured firewall rule allowing unauthorized access.,Access Control,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Functions with misconfigured trigger allowing unauthorized invocation.,Access Control,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud VCN with misconfigured egress rule allowing data exfiltration.,Data Exfiltration,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured service account allowing privilege escalation.,Privilege Escalation,IBM Cloud,50,1,0,1,1,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured audit logging exposing sensitive queries.,Data Exposure,Alibaba Cloud,55,1,1,0,1,0,0,0,1,0
+,AWS API Gateway with misconfigured IAM policy allowing unauthorized access.,Access Control,AWS,0,1,0,0,0,0,0,1,0,0
+,Azure Cosmos DB with misconfigured role definition allowing privilege escalation.,Privilege Escalation,Azure,25,1,0,1,0,0,0,1,0,0
+,GCP Cloud Storage with misconfigured IAM binding allowing data exposure.,Data Exposure,GCP,25,1,0,0,1,0,0,1,1,0
+,Oracle Cloud Database with misconfigured backup retention exposing old data.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,0,0,0
+,IBM Cloud Functions with misconfigured action binding allowing unauthorized invocation.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud OSS with misconfigured bucket encryption exposing data.,Encryption,Alibaba Cloud,0,1,0,0,0,0,0,0,1,0
+,AWS CloudTrail with misconfigured log validation allowing log tampering.,Monitoring,AWS,0,1,0,0,0,0,0,0,1,0
+,Azure Virtual Machine with misconfigured network security group allowing RDP brute force.,Authentication,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Functions with misconfigured memory limit allowing resource exhaustion.,Denial of Service,GCP,10,1,0,0,0,1,0,0,0,0
+,Oracle Cloud Load Balancer with misconfigured backend policy allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,1,0,0
+,IBM Cloud VPC with misconfigured VPN gateway allowing weak encryption.,Encryption,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured user data allowing code injection.,Code Injection,Alibaba Cloud,0,1,0,0,0,0,0,0,0,0
+,AWS EKS with misconfigured node group allowing privilege escalation.,Privilege Escalation,AWS,25,1,0,1,0,0,0,0,0,0
+,Azure API Management with misconfigured logging exposing sensitive data.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud SQL with misconfigured network authorization allowing unauthorized access.,Access Control,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud Identity with misconfigured MFA policy allowing weak authentication.,Authentication,Oracle Cloud,0,1,0,0,0,0,0,1,0,0
+,IBM Cloud Functions with misconfigured logging exposing sensitive data.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,0,1,0
+,Alibaba Cloud OSS with misconfigured lifecycle rule allowing data exposure.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,1,0
+,AWS SNS with misconfigured topic policy allowing unauthorized access.,Access Control,AWS,0,1,0,0,0,0,0,1,0,0
+,Azure Event Hub with misconfigured consumer group allowing data leakage.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP BigQuery with misconfigured dataset access allowing unauthorized queries.,Access Control,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud Object Storage with misconfigured bucket policy allowing data tampering.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,1,1,0
+,IBM Cloud Kubernetes with misconfigured liveness probe allowing resource exhaustion.,Denial of Service,IBM Cloud,10,1,0,0,0,1,0,0,0,0
+,Alibaba Cloud ECS with misconfigured instance role allowing privilege escalation.,Privilege Escalation,Alibaba Cloud,25,1,0,1,0,0,0,1,0,0
+,AWS CloudFormation with misconfigured parameter exposing sensitive data.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Machine Learning with misconfigured pipeline allowing code injection.,Code Injection,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Monitoring with misconfigured notification channel exposing alerts.,Data Exposure,GCP,55,1,1,0,1,0,0,0,0,0
+,Oracle Cloud Functions with misconfigured environment variables exposing secrets.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,0,0,0
+,IBM Cloud VPC with misconfigured network ACL allowing traffic interception.,Network Security,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured encryption key allowing data exposure.,Encryption,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS Redshift with misconfigured IAM role allowing privilege escalation.,Privilege Escalation,AWS,25,1,0,1,0,0,0,1,0,0
+,Azure Data Lake with misconfigured access control allowing data exposure.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Composer with misconfigured Airflow DAG allowing code execution.,Code Injection,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud VCN with misconfigured route table allowing traffic interception.,Network Security,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured pod security policy allowing privilege escalation.,Privilege Escalation,IBM Cloud,25,1,0,1,0,0,0,1,0,0
+,Alibaba Cloud OSS with misconfigured bucket tagging allowing unauthorized access.,Access Control,Alibaba Cloud,0,1,0,0,0,0,0,0,1,0
+,AWS S3 bucket with misconfigured access logging exposing request metadata.,Data Exposure,AWS,55,1,1,0,1,0,0,0,1,0
+,Azure Stream Analytics with misconfigured output allowing data exfiltration.,Data Exfiltration,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Armor with misconfigured XSS protection allowing attacks.,Injection,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud File Storage with misconfigured snapshot exposing data.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,0,0,0
+,IBM Cloud Databases with misconfigured encryption exposing data.,Encryption,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured security group allowing SSH brute force.,Authentication,Alibaba Cloud,0,1,0,0,0,0,0,0,0,0
+,AWS ElastiCache with misconfigured node access allowing unauthorized connections.,Access Control,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Databricks with misconfigured cluster allowing code execution.,Code Injection,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud VPN with misconfigured encryption allowing weak ciphers.,Encryption,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud Compute with misconfigured SSH key allowing unauthorized access.,Authentication,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Functions with misconfigured environment exposing sensitive data.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,0,0,0
+,Alibaba Cloud OSS with misconfigured bucket policy allowing data exfiltration.,Data Exfiltration,Alibaba Cloud,0,1,0,0,0,0,0,1,1,0
+,AWS CodeBuild with misconfigured build timeout allowing resource exhaustion.,Denial of Service,AWS,10,1,0,0,0,1,0,0,0,0
+,Azure Cognitive Services with misconfigured access key allowing unauthorized access.,Access Control,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Spanner with misconfigured database role allowing privilege escalation.,Privilege Escalation,GCP,25,1,0,1,0,0,0,1,0,0
+,Oracle Cloud API Gateway with misconfigured CORS allowing data exfiltration.,Data Exfiltration,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Security Group with misconfigured egress rules allowing data exfiltration.,Data Exfiltration,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured disk snapshot allowing data exposure.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS S3 bucket with misconfigured event notification allowing unauthorized actions.,Access Control,AWS,0,1,0,0,0,0,0,0,1,0
+,Azure Virtual Network with misconfigured subnet allowing lateral movement.,Network Security,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud DNS with misconfigured record allowing domain hijacking.,Domain Hijacking,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud Identity with misconfigured user role allowing privilege escalation.,Privilege Escalation,Oracle Cloud,25,1,0,1,0,0,0,1,0,0
+,IBM Cloud VPC with misconfigured endpoint allowing unauthorized access.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured replica allowing data exposure.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS SNS with misconfigured subscription endpoint allowing data exfiltration.,Data Exfiltration,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Virtual Machine with misconfigured diagnostic logs exposing sensitive data.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud SQL with misconfigured database flags allowing code execution.,Code Injection,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud File Storage with misconfigured NFS options allowing data tampering.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured node taint allowing resource exhaustion.,Denial of Service,IBM Cloud,10,1,0,0,0,1,0,0,0,0
+,Alibaba Cloud OSS with misconfigured bucket notification allowing data exfiltration.,Data Exfiltration,Alibaba Cloud,0,1,0,0,0,0,0,0,1,0
+,AWS EKS with misconfigured audit logging exposing sensitive data.,Data Exposure,AWS,55,1,1,0,1,0,0,0,1,0
+,Azure API Management with misconfigured rate limiting allowing DoS attacks.,Denial of Service,Azure,10,1,0,0,0,1,0,0,0,0
+,GCP Cloud Run with misconfigured CPU allocation allowing resource exhaustion.,Denial of Service,GCP,10,1,0,0,0,1,0,0,0,0
+,Oracle Cloud Load Balancer with misconfigured access log exposing sensitive data.,Data Exposure,Oracle Cloud,55,1,1,0,1,0,0,0,1,0
+,IBM Cloud VPC with misconfigured floating IP allowing unauthorized access.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured monitoring exposing database metrics.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS SNS with misconfigured message attributes exposing sensitive data.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Virtual Network with misconfigured network security group allowing lateral movement.,Network Security,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud SQL with misconfigured binary logging allowing data exposure.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud File Storage with misconfigured snapshot policy allowing data exposure.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,1,0,0
+,IBM Cloud Databases with misconfigured audit logging exposing sensitive data.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,0,1,0
+,Alibaba Cloud ECS with misconfigured auto-scaling policy allowing resource exhaustion.,Denial of Service,Alibaba Cloud,10,1,0,0,0,1,0,1,0,0
+,AWS Lambda with misconfigured environment variables exposing secrets.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Kubernetes with misconfigured role binding allowing privilege escalation.,Privilege Escalation,Azure,50,1,0,1,1,0,0,1,0,0
+,GCP Cloud Run with misconfigured IAM policy allowing unauthorized access.,Access Control,GCP,0,1,0,0,0,0,0,1,0,0
+,Oracle Cloud Load Balancer with misconfigured health check allowing DoS attacks.,Denial of Service,Oracle Cloud,10,1,0,0,0,1,0,0,0,0
+,IBM Cloud Functions with misconfigured logging destination exposing sensitive data.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,0,1,0
+,Alibaba Cloud OSS with misconfigured bucket policy allowing data exfiltration.,Data Exfiltration,Alibaba Cloud,0,1,0,0,0,0,0,1,1,0
+,AWS API Gateway with misconfigured logging exposing sensitive data.,Data Exposure,AWS,55,1,1,0,1,0,0,0,1,0
+,Azure App Service with misconfigured CORS allowing data exfiltration.,Data Exfiltration,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Storage with misconfigured bucket ACL allowing data tampering.,Data Exposure,GCP,25,1,0,0,1,0,0,0,1,0
+,Oracle Cloud Database with misconfigured audit policy allowing undetected access.,Monitoring,Oracle Cloud,0,1,0,0,0,0,0,1,0,0
+,AWS ECS with misconfigured IAM role allowing privilege escalation.,Privilege Escalation,AWS,25,1,0,1,0,0,0,1,0,0
+,Azure Function with misconfigured authentication allowing unauthorized access.,Authentication,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Run with misconfigured timeout allowing resource exhaustion.,Denial of Service,GCP,10,1,0,0,0,1,0,0,0,0
+,Oracle Cloud Compute with misconfigured VNIC allowing traffic interception.,Network Security,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Object Storage with misconfigured bucket policy allowing data tampering.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,1,1,0
+,Alibaba Cloud SLB with misconfigured SSL cipher allowing weak encryption.,Encryption,Alibaba Cloud,0,1,0,0,0,0,0,0,0,0
+,AWS S3 bucket with misconfigured replication exposing data.,Data Exposure,AWS,55,1,1,0,1,0,0,0,1,0
+,Azure SQL Database with misconfigured auditing exposing sensitive queries.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Functions with misconfigured IAM policy allowing unauthorized invocation.,Access Control,GCP,0,1,0,0,0,0,0,1,0,0
+,Oracle Cloud VCN with misconfigured NAT rule allowing data exfiltration.,Data Exfiltration,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured network policy allowing lateral movement.,Network Security,IBM Cloud,0,1,0,0,0,0,0,1,0,0
+,Alibaba Cloud RDS with misconfigured parameter exposing sensitive data.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS API Gateway with misconfigured cache allowing data leakage.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Cosmos DB with misconfigured indexing policy allowing unauthorized queries.,Access Control,Azure,0,1,0,0,0,0,0,1,0,0
+,GCP Cloud Storage with misconfigured lifecycle rule exposing archived data.,Data Exposure,GCP,25,1,0,0,1,0,0,0,1,0
+,Oracle Cloud Database with misconfigured TDE exposing data.,Encryption,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Functions with misconfigured concurrency allowing DoS attacks.,Denial of Service,IBM Cloud,10,1,0,0,0,1,0,0,0,0
+,Alibaba Cloud OSS with misconfigured access policy allowing data tampering.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,1,1,0
+,AWS CloudTrail with misconfigured S3 bucket access allowing log exposure.,Data Exposure,AWS,25,1,0,0,1,0,0,0,1,0
+,Azure Virtual Machine with misconfigured public IP allowing unauthorized access.,Access Control,Azure,30,1,1,0,0,0,0,0,0,0
+,GCP Cloud Functions with misconfigured event trigger allowing unauthorized invocation.,Access Control,GCP,0,1,0,0,0,0,0,0,1,0
+,Oracle Cloud Load Balancer with misconfigured listener allowing protocol downgrade.,Encryption,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud VPC with misconfigured subnet routing allowing traffic interception.,Network Security,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured metadata endpoint exposing sensitive data.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS EKS with misconfigured service account token allowing privilege escalation.,Privilege Escalation,AWS,50,1,0,1,1,0,0,0,0,0
+,Azure API Management with misconfigured backend allowing unauthorized access.,Access Control,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud SQL with misconfigured backup policy exposing data.,Data Exposure,GCP,55,1,1,0,1,0,0,1,1,0
+,Oracle Cloud Identity with misconfigured group policy allowing privilege escalation.,Privilege Escalation,Oracle Cloud,25,1,0,1,0,0,0,1,0,0
+,IBM Cloud Functions with misconfigured rate limiting allowing DoS attacks.,Denial of Service,IBM Cloud,10,1,0,0,0,1,0,0,0,0
+,Alibaba Cloud OSS with misconfigured bucket versioning allowing data exposure.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,1,0
+,AWS SNS with misconfigured delivery policy allowing message loss.,Data Loss,AWS,0,1,0,0,0,0,0,1,0,0
+,Azure Event Hub with misconfigured SAS token allowing unauthorized access.,Access Control,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP BigQuery with misconfigured view access allowing unauthorized queries.,Access Control,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud Object Storage with misconfigured CORS policy allowing data exfiltration.,Data Exfiltration,Oracle Cloud,0,1,0,0,0,0,0,1,1,0
+,IBM Cloud Kubernetes with misconfigured pod affinity allowing resource exhaustion.,Denial of Service,IBM Cloud,10,1,0,0,0,1,0,0,0,0
+,Alibaba Cloud ECS with misconfigured instance type allowing resource exhaustion.,Denial of Service,Alibaba Cloud,10,1,0,0,0,1,0,0,0,0
+,AWS CloudFormation with misconfigured stack set allowing unauthorized deployment.,Access Control,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Machine Learning with misconfigured endpoint allowing inference attacks.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Monitoring with misconfigured dashboard exposing sensitive metrics.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud Functions with misconfigured IAM policy allowing unauthorized invocation.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,1,0,0
+,IBM Cloud VPC with misconfigured security group allowing unauthorized access.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured snapshot policy allowing data exposure.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,1,0,0
+,AWS Redshift with misconfigured cluster parameter group exposing data.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Data Lake with misconfigured file system access allowing data tampering.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Composer with misconfigured environment variable allowing code injection.,Code Injection,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud VCN with misconfigured security group allowing lateral movement.,Network Security,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured resource quota allowing resource exhaustion.,Denial of Service,IBM Cloud,10,1,0,0,0,1,0,0,0,0
+,Alibaba Cloud OSS with misconfigured bucket encryption policy exposing data.,Encryption,Alibaba Cloud,0,1,0,0,0,0,0,1,1,0
+,AWS S3 bucket with misconfigured lifecycle transition exposing archived data.,Data Exposure,AWS,25,1,0,0,1,0,0,0,1,0
+,Azure Stream Analytics with misconfigured job output allowing data exfiltration.,Data Exfiltration,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Armor with misconfigured rate limiting allowing DoS attacks.,Denial of Service,GCP,10,1,0,0,0,1,0,0,0,0
+,Oracle Cloud File Storage with misconfigured export policy allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,1,0,0
+,IBM Cloud Databases with misconfigured connection pooling exposing credentials.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured firewall rule allowing unauthorized access.,Access Control,Alibaba Cloud,0,1,0,0,0,0,0,0,0,0
+,AWS ElastiCache with misconfigured Redis AUTH allowing unauthorized access.,Authentication,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Databricks with misconfigured notebook allowing code injection.,Code Injection,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud VPN with misconfigured routing allowing traffic interception.,Network Security,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud Compute with misconfigured boot volume allowing data exposure.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,0,0,0
+,IBM Cloud Functions with misconfigured trigger policy allowing unauthorized invocation.,Access Control,IBM Cloud,0,1,0,0,0,0,0,1,0,0
+,Alibaba Cloud OSS with misconfigured bucket logging exposing request metadata.,Data Exposure,Alibaba Cloud,55,1,1,0,1,0,0,0,1,0
+,AWS CodeBuild with misconfigured source repository allowing code injection.,Code Injection,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Cognitive Services with misconfigured API key exposing sensitive data.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Spanner with misconfigured backup policy exposing data.,Data Exposure,GCP,55,1,1,0,1,0,0,1,1,0
+,Oracle Cloud API Gateway with misconfigured authentication allowing unauthorized access.,Authentication,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Security Group with misconfigured protocol allowing unauthorized access.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured monitoring exposing instance metrics.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS S3 bucket with misconfigured notification policy allowing unauthorized actions.,Access Control,AWS,30,1,1,0,0,0,0,1,1,0
+,Azure Virtual Network with misconfigured DNS settings allowing domain hijacking.,Domain Hijacking,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud DNS with misconfigured zone transfer allowing data exposure.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud Identity with misconfigured compartment policy allowing privilege escalation.,Privilege Escalation,Oracle Cloud,25,1,0,1,0,0,0,1,0,0
+,IBM Cloud VPC with misconfigured flow log policy exposing network traffic.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,1,1,0
+,Alibaba Cloud RDS with misconfigured user permissions allowing data tampering.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,1,0,0
+,AWS SNS with misconfigured topic subscription allowing data exfiltration.,Data Exfiltration,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Virtual Machine with misconfigured extension allowing code execution.,Code Injection,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud SQL with misconfigured maintenance window allowing DoS attacks.,Denial of Service,GCP,10,1,0,0,0,1,0,0,0,0
+,Oracle Cloud File Storage with misconfigured access control allowing data tampering.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured pod security context allowing privilege escalation.,Privilege Escalation,IBM Cloud,25,1,0,1,0,0,0,0,0,0
+,Alibaba Cloud OSS with misconfigured bucket policy allowing unauthorized access.,Access Control,Alibaba Cloud,0,1,0,0,0,0,0,1,1,0
+,AWS EKS with misconfigured logging policy exposing sensitive data.,Data Exposure,AWS,55,1,1,0,1,0,0,1,1,0
+,Azure API Management with misconfigured subscription policy allowing unauthorized access.,Access Control,Azure,0,1,0,0,0,0,0,1,0,0
+,GCP Cloud Run with misconfigured service account allowing privilege escalation.,Privilege Escalation,GCP,25,1,0,1,0,0,0,0,0,0
+,Oracle Cloud Load Balancer with misconfigured routing policy allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,1,0,0
+,IBM Cloud VPC with misconfigured public gateway allowing unauthorized access.,Access Control,IBM Cloud,30,1,1,0,0,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured maintenance policy allowing DoS attacks.,Denial of Service,Alibaba Cloud,10,1,0,0,0,1,0,1,0,0
+,AWS SNS with misconfigured message filtering exposing sensitive data.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Virtual Network with misconfigured service endpoint allowing data exfiltration.,Data Exfiltration,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud SQL with misconfigured user authentication allowing unauthorized access.,Authentication,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud File Storage with misconfigured mount target allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Databases with misconfigured backup policy exposing data.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,1,1,0
+,Alibaba Cloud ECS with misconfigured snapshot policy allowing data exposure.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,1,0,0
+,AWS Lambda with misconfigured function policy allowing unauthorized invocation.,Access Control,AWS,0,1,0,0,0,0,0,1,0,0
+,Azure Kubernetes with misconfigured network policy allowing unauthorized access.,Access Control,Azure,0,1,0,0,0,0,0,1,0,0
+,GCP Cloud Run with misconfigured environment variable exposing secrets.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud Load Balancer with misconfigured backend set allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Functions with misconfigured trigger allowing unauthorized invocation.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud OSS with misconfigured CORS allowing data exfiltration.,Data Exfiltration,Alibaba Cloud,0,1,0,0,0,0,0,0,1,0
+,AWS API Gateway with misconfigured throttling allowing DoS attacks.,Denial of Service,AWS,10,1,0,0,0,1,0,0,0,0
+,Azure App Service with misconfigured authentication allowing session hijacking.,Session Management,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Storage with misconfigured bucket policy allowing data exposure.,Data Exposure,GCP,25,1,0,0,1,0,0,1,1,0
+,Oracle Cloud Database with misconfigured encryption key exposing data.,Encryption,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,AWS ECS with misconfigured network mode allowing container-to-host communication.,Network Security,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Function with misconfigured HTTP trigger allowing SQL injection.,Injection,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Run with misconfigured memory limit allowing DoS attacks.,Denial of Service,GCP,10,1,0,0,0,1,0,0,0,0
+,Oracle Cloud Compute with misconfigured security list allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Object Storage with misconfigured CORS policy allowing data exfiltration.,Data Exfiltration,IBM Cloud,0,1,0,0,0,0,0,1,1,0
+,Alibaba Cloud SLB with misconfigured backend server exposing internal services.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS S3 bucket with misconfigured object lock allowing data tampering.,Data Exposure,AWS,25,1,0,0,1,0,0,0,1,0
+,Azure SQL Database with misconfigured TDE exposing data.,Encryption,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Functions with misconfigured environment variable exposing secrets.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud VCN with misconfigured service gateway allowing data exfiltration.,Data Exfiltration,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured RBAC policy allowing privilege escalation.,Privilege Escalation,IBM Cloud,50,1,0,1,1,0,0,1,0,0
+,Alibaba Cloud RDS with misconfigured binary logging exposing data.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS API Gateway with misconfigured authorizer allowing unauthorized access.,Authentication,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Cosmos DB with misconfigured partition key exposing data.,Data Exposure,Azure,55,1,1,0,1,0,0,0,0,0
+,GCP Cloud Storage with misconfigured bucket notification allowing data exfiltration.,Data Exfiltration,GCP,0,1,0,0,0,0,0,0,1,0
+,Oracle Cloud Database with misconfigured listener exposing sensitive data.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,0,0,0
+,IBM Cloud Functions with misconfigured action policy allowing unauthorized invocation.,Access Control,IBM Cloud,0,1,0,0,0,0,0,1,0,0
+,Alibaba Cloud OSS with misconfigured bucket tag allowing unauthorized access.,Access Control,Alibaba Cloud,0,1,0,0,0,0,0,0,1,0
+,AWS CloudTrail with misconfigured event selector exposing sensitive logs.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Virtual Machine with misconfigured NSG rule allowing lateral movement.,Network Security,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Functions with misconfigured timeout allowing resource exhaustion.,Denial of Service,GCP,10,1,0,0,0,1,0,0,0,0
+,Oracle Cloud Load Balancer with misconfigured SSL policy allowing weak ciphers.,Encryption,Oracle Cloud,0,1,0,0,0,0,0,1,0,0
+,IBM Cloud VPC with misconfigured VPN policy allowing weak encryption.,Encryption,IBM Cloud,0,1,0,0,0,0,0,1,0,0
+,Alibaba Cloud ECS with misconfigured user data allowing command injection.,Code Injection,Alibaba Cloud,20,1,0,0,0,0,0,0,0,1
+,AWS EKS with misconfigured pod security policy allowing privilege escalation.,Privilege Escalation,AWS,25,1,0,1,0,0,0,1,0,0
+,Azure API Management with misconfigured CORS policy allowing data exfiltration.,Data Exfiltration,Azure,0,1,0,0,0,0,0,1,0,0
+,GCP Cloud SQL with misconfigured SSL requirement exposing data.,Encryption,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud Identity with misconfigured authentication policy allowing weak passwords.,Authentication,Oracle Cloud,0,1,0,0,0,0,0,1,0,0
+,IBM Cloud Functions with misconfigured environment exposing sensitive data.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,0,0,0
+,Alibaba Cloud OSS with misconfigured bucket lifecycle policy exposing data.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,1,1,0
+,AWS SNS with misconfigured topic policy allowing unauthorized publishing.,Access Control,AWS,0,1,0,0,0,0,0,1,0,0
+,Azure Event Hub with misconfigured partition access allowing data leakage.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP BigQuery with misconfigured table access allowing unauthorized queries.,Access Control,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud Object Storage with misconfigured bucket policy allowing data exposure.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,1,1,0
+,IBM Cloud Kubernetes with misconfigured readiness probe allowing DoS attacks.,Denial of Service,IBM Cloud,10,1,0,0,0,1,0,0,0,0
+,Alibaba Cloud ECS with misconfigured IAM role allowing privilege escalation.,Privilege Escalation,Alibaba Cloud,25,1,0,1,0,0,0,1,0,0
+,AWS CloudFormation with misconfigured template exposing sensitive parameters.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Machine Learning with misconfigured dataset access allowing data leakage.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Monitoring with misconfigured alert policy exposing sensitive data.,Data Exposure,GCP,55,1,1,0,1,0,0,1,0,0
+,Oracle Cloud Functions with misconfigured trigger policy allowing unauthorized invocation.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,1,0,0
+,IBM Cloud VPC with misconfigured network ACL allowing lateral movement.,Network Security,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured encryption policy exposing data.,Encryption,Alibaba Cloud,0,1,0,0,0,0,0,1,0,0
+,AWS Redshift with misconfigured snapshot policy exposing data.,Data Exposure,AWS,25,1,0,0,1,0,0,1,0,0
+,Azure Data Lake with misconfigured storage account access allowing data exfiltration.,Data Exfiltration,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Composer with misconfigured web server access allowing unauthorized access.,Access Control,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud VCN with misconfigured internet gateway allowing data exfiltration.,Data Exfiltration,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured node selector allowing resource exhaustion.,Denial of Service,IBM Cloud,10,1,0,0,0,1,0,0,0,0
+,Alibaba Cloud OSS with misconfigured bucket access log exposing request metadata.,Data Exposure,Alibaba Cloud,55,1,1,0,1,0,0,0,1,0
+,AWS S3 bucket with misconfigured versioning policy allowing data exposure.,Data Exposure,AWS,25,1,0,0,1,0,0,1,1,0
+,Azure Stream Analytics with misconfigured input allowing data leakage.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Armor with misconfigured SQL injection protection allowing attacks.,Injection,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud File Storage with misconfigured snapshot retention exposing data.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,0,0,0
+,IBM Cloud Databases with misconfigured SSL exposing data.,Encryption,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured network interface allowing traffic interception.,Network Security,Alibaba Cloud,0,1,0,0,0,0,0,0,0,0
+,AWS ElastiCache with misconfigured cluster access allowing unauthorized connections.,Access Control,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Databricks with misconfigured cluster policy allowing privilege escalation.,Privilege Escalation,Azure,25,1,0,1,0,0,0,1,0,0
+,GCP Cloud VPN with misconfigured IKE version allowing weak encryption.,Encryption,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud Compute with misconfigured instance metadata exposing credentials.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,0,0,0
+,IBM Cloud Functions with misconfigured logging policy exposing sensitive data.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,1,1,0
+,Alibaba Cloud OSS with misconfigured bucket policy allowing data tampering.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,1,1,0
+,AWS CodeBuild with misconfigured environment variable exposing secrets.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Cognitive Services with misconfigured endpoint allowing unauthorized access.,Access Control,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Spanner with misconfigured IAM policy allowing unauthorized access.,Access Control,GCP,0,1,0,0,0,0,0,1,0,0
+,Oracle Cloud API Gateway with misconfigured rate limiting allowing DoS attacks.,Denial of Service,Oracle Cloud,10,1,0,0,0,1,0,0,0,0
+,IBM Cloud Security Group with misconfigured ingress rule allowing unauthorized access.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured disk encryption exposing data.,Encryption,Alibaba Cloud,0,1,0,0,0,0,0,0,0,0
+,AWS S3 bucket with misconfigured event trigger allowing unauthorized actions.,Access Control,AWS,0,1,0,0,0,0,0,0,1,0
+,Azure Virtual Network with misconfigured subnet delegation allowing privilege escalation.,Privilege Escalation,Azure,25,1,0,1,0,0,0,0,0,0
+,GCP Cloud DNS with misconfigured DNSSEC exposing domain data.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud Identity with misconfigured role policy allowing privilege escalation.,Privilege Escalation,Oracle Cloud,25,1,0,1,0,0,0,1,0,0
+,IBM Cloud VPC with misconfigured endpoint gateway allowing unauthorized access.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured audit policy exposing sensitive queries.,Data Exposure,Alibaba Cloud,55,1,1,0,1,0,0,1,1,0
+,AWS SNS with misconfigured subscription policy allowing data exfiltration.,Data Exfiltration,AWS,0,1,0,0,0,0,0,1,0,0
+,Azure Virtual Machine with misconfigured boot diagnostics exposing sensitive data.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud SQL with misconfigured database flag allowing privilege escalation.,Privilege Escalation,GCP,25,1,0,1,0,0,0,0,0,0
+,Oracle Cloud File Storage with misconfigured NFS export allowing data exposure.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured taint policy allowing resource exhaustion.,Denial of Service,IBM Cloud,10,1,0,0,0,1,0,1,0,0
+,Alibaba Cloud OSS with misconfigured notification policy allowing data exfiltration.,Data Exfiltration,Alibaba Cloud,0,1,0,0,0,0,0,1,0,0
+,AWS EKS with misconfigured audit policy exposing sensitive data.,Data Exposure,AWS,55,1,1,0,1,0,0,1,1,0
+,Azure API Management with misconfigured logging policy exposing sensitive data.,Data Exposure,Azure,25,1,0,0,1,0,0,1,0,0
+,GCP Cloud Run with misconfigured concurrency limit allowing DoS attacks.,Denial of Service,GCP,10,1,0,0,0,1,0,0,0,0
+,Oracle Cloud Load Balancer with misconfigured access log policy exposing sensitive data.,Data Exposure,Oracle Cloud,55,1,1,0,1,0,0,1,1,0
+,IBM Cloud VPC with misconfigured floating IP policy allowing unauthorized access.,Access Control,IBM Cloud,0,1,0,0,0,0,0,1,0,0
+,Alibaba Cloud RDS with misconfigured monitoring policy exposing database metrics.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,1,0,0
+,AWS SNS with misconfigured message policy exposing sensitive data.,Data Exposure,AWS,25,1,0,0,1,0,0,1,0,0
+,Azure Virtual Network with misconfigured network security group allowing data exfiltration.,Data Exfiltration,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud SQL with misconfigured binary log retention exposing data.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud File Storage with misconfigured snapshot policy allowing data tampering.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,1,0,0
+,IBM Cloud Databases with misconfigured audit logging exposing sensitive data.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,0,1,0
+,Alibaba Cloud ECS with misconfigured auto-scaling policy allowing DoS attacks.,Denial of Service,Alibaba Cloud,10,1,0,0,0,1,0,1,0,0
+,AWS Lambda with misconfigured logging policy exposing sensitive data.,Data Exposure,AWS,55,1,1,0,1,0,0,1,1,0
+,Azure Kubernetes with misconfigured pod security context allowing privilege escalation.,Privilege Escalation,Azure,25,1,0,1,0,0,0,0,0,0
+,GCP Cloud Run with misconfigured IAM binding allowing unauthorized access.,Access Control,GCP,0,1,0,0,0,0,0,1,0,0
+,Oracle Cloud Load Balancer with misconfigured health check policy allowing DoS attacks.,Denial of Service,Oracle Cloud,10,1,0,0,0,1,0,1,0,0
+,IBM Cloud Functions with misconfigured environment variable exposing secrets.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,0,0,0
+,Alibaba Cloud OSS with misconfigured bucket policy allowing data exfiltration.,Data Exfiltration,Alibaba Cloud,0,1,0,0,0,0,0,1,1,0
+,AWS API Gateway with misconfigured access logging exposing sensitive data.,Data Exposure,AWS,55,1,1,0,1,0,0,0,1,0
+,Azure App Service with misconfigured CORS policy allowing data exfiltration.,Data Exfiltration,Azure,0,1,0,0,0,0,0,1,0,0
+,GCP Cloud Storage with misconfigured bucket ACL allowing data tampering.,Data Exposure,GCP,25,1,0,0,1,0,0,0,1,0
+,Oracle Cloud Database with misconfigured audit policy allowing undetected access.,Monitoring,Oracle Cloud,0,1,0,0,0,0,0,1,0,0
+,AWS ECS with misconfigured task execution role allowing privilege escalation.,Privilege Escalation,AWS,25,1,0,1,0,0,0,1,0,0
+,Azure Function with misconfigured trigger binding allowing code injection.,Code Injection,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Run with misconfigured autoscaling policy allowing resource exhaustion.,Denial of Service,GCP,10,1,0,0,0,1,0,1,0,0
+,Oracle Cloud Compute with misconfigured VNIC attachment allowing traffic interception.,Network Security,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Object Storage with misconfigured bucket versioning exposing deleted objects.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,0,1,0
+,Alibaba Cloud SLB with misconfigured health check interval allowing DoS attacks.,Denial of Service,Alibaba Cloud,10,1,0,0,0,1,0,0,0,0
+,AWS S3 bucket with misconfigured bucket policy allowing data tampering.,Data Exposure,AWS,25,1,0,0,1,0,0,1,1,0
+,Azure SQL Database with misconfigured firewall rule allowing unauthorized access.,Access Control,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Functions with misconfigured trigger allowing unauthorized invocation.,Access Control,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud VCN with misconfigured egress rule allowing data exfiltration.,Data Exfiltration,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured service account allowing privilege escalation.,Privilege Escalation,IBM Cloud,50,1,0,1,1,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured audit logging exposing sensitive queries.,Data Exposure,Alibaba Cloud,55,1,1,0,1,0,0,0,1,0
+,AWS API Gateway with misconfigured IAM policy allowing unauthorized access.,Access Control,AWS,0,1,0,0,0,0,0,1,0,0
+,Azure Cosmos DB with misconfigured role definition allowing privilege escalation.,Privilege Escalation,Azure,25,1,0,1,0,0,0,1,0,0
+,GCP Cloud Storage with misconfigured IAM binding allowing data exposure.,Data Exposure,GCP,25,1,0,0,1,0,0,1,1,0
+,Oracle Cloud Database with misconfigured backup retention exposing old data.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,0,0,0
+,IBM Cloud Functions with misconfigured action binding allowing unauthorized invocation.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud OSS with misconfigured bucket encryption exposing data.,Encryption,Alibaba Cloud,0,1,0,0,0,0,0,0,1,0
+,AWS CloudTrail with misconfigured log validation allowing log tampering.,Monitoring,AWS,0,1,0,0,0,0,0,0,1,0
+,Azure Virtual Machine with misconfigured network security group allowing RDP brute force.,Authentication,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Functions with misconfigured memory limit allowing resource exhaustion.,Denial of Service,GCP,10,1,0,0,0,1,0,0,0,0
+,Oracle Cloud Load Balancer with misconfigured backend policy allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,1,0,0
+,IBM Cloud VPC with misconfigured VPN gateway allowing weak encryption.,Encryption,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured user data allowing code injection.,Code Injection,Alibaba Cloud,0,1,0,0,0,0,0,0,0,0
+,AWS EKS with misconfigured node group allowing privilege escalation.,Privilege Escalation,AWS,25,1,0,1,0,0,0,0,0,0
+,Azure API Management with misconfigured logging exposing sensitive data.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud SQL with misconfigured network authorization allowing unauthorized access.,Access Control,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud Identity with misconfigured MFA policy allowing weak authentication.,Authentication,Oracle Cloud,0,1,0,0,0,0,0,1,0,0
+,IBM Cloud Functions with misconfigured logging exposing sensitive data.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,0,1,0
+,Alibaba Cloud OSS with misconfigured lifecycle rule allowing data exposure.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,1,0
+,AWS SNS with misconfigured topic policy allowing unauthorized access.,Access Control,AWS,0,1,0,0,0,0,0,1,0,0
+,Azure Event Hub with misconfigured consumer group allowing data leakage.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP BigQuery with misconfigured dataset access allowing unauthorized queries.,Access Control,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud Object Storage with misconfigured bucket policy allowing data tampering.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,1,1,0
+,IBM Cloud Kubernetes with misconfigured liveness probe allowing resource exhaustion.,Denial of Service,IBM Cloud,10,1,0,0,0,1,0,0,0,0
+,Alibaba Cloud ECS with misconfigured instance role allowing privilege escalation.,Privilege Escalation,Alibaba Cloud,25,1,0,1,0,0,0,1,0,0
+,AWS CloudFormation with misconfigured parameter exposing sensitive data.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Machine Learning with misconfigured pipeline allowing code injection.,Code Injection,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Monitoring with misconfigured notification channel exposing alerts.,Data Exposure,GCP,55,1,1,0,1,0,0,0,0,0
+,Oracle Cloud Functions with misconfigured environment variables exposing secrets.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,0,0,0
+,IBM Cloud VPC with misconfigured network ACL allowing traffic interception.,Network Security,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured encryption key allowing data exposure.,Encryption,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS Redshift with misconfigured IAM role allowing privilege escalation.,Privilege Escalation,AWS,25,1,0,1,0,0,0,1,0,0
+,Azure Data Lake with misconfigured access control allowing data exposure.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Composer with misconfigured Airflow DAG allowing code execution.,Code Injection,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud VCN with misconfigured route table allowing traffic interception.,Network Security,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured pod security policy allowing privilege escalation.,Privilege Escalation,IBM Cloud,25,1,0,1,0,0,0,1,0,0
+,Alibaba Cloud OSS with misconfigured bucket logging exposing access patterns.,Data Exposure,Alibaba Cloud,55,1,1,0,1,0,0,0,1,0
+,AWS S3 bucket with misconfigured lifecycle policy exposing archived data.,Data Exposure,AWS,25,1,0,0,1,0,0,1,1,0
+,Azure Stream Analytics with misconfigured output sink allowing data exfiltration.,Data Exfiltration,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Armor with misconfigured XSS protection allowing attacks.,Injection,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud File Storage with misconfigured export options allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Databases with misconfigured connection string exposing credentials.,Data Exposure,IBM Cloud,55,1,1,0,1,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured security group allowing SSH brute force.,Authentication,Alibaba Cloud,0,1,0,0,0,0,0,0,0,0
+,AWS ElastiCache with misconfigured Memcached access allowing unauthorized connections.,Access Control,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Databricks with misconfigured workspace access allowing data leakage.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud VPN with misconfigured tunnel allowing traffic interception.,Network Security,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud Compute with misconfigured instance pool allowing resource exhaustion.,Denial of Service,Oracle Cloud,10,1,0,0,0,1,0,0,0,0
+,IBM Cloud Functions with misconfigured trigger rule allowing unauthorized invocation.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud OSS with misconfigured bucket policy allowing data exposure.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,1,1,0
+,AWS CodeBuild with misconfigured buildspec allowing code injection.,Code Injection,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Cognitive Services with misconfigured key rotation policy exposing keys.,Data Exposure,Azure,25,1,0,0,1,0,0,1,0,0
+,GCP Cloud Spanner with misconfigured backup retention exposing data.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud API Gateway with misconfigured CORS policy allowing data exfiltration.,Data Exfiltration,Oracle Cloud,0,1,0,0,0,0,0,1,0,0
+,IBM Cloud Security Group with misconfigured egress rule allowing data exfiltration.,Data Exfiltration,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured instance metadata exposing sensitive data.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS S3 bucket with misconfigured notification policy triggering external services.,Data Exfiltration,AWS,0,1,0,0,0,0,0,1,1,0
+,Azure Virtual Network with misconfigured peering allowing lateral movement.,Network Security,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud DNS with misconfigured zone policy exposing records.,Data Exposure,GCP,25,1,0,0,1,0,0,1,0,0
+,Oracle Cloud Identity with misconfigured group membership allowing privilege escalation.,Privilege Escalation,Oracle Cloud,25,1,0,1,0,0,0,1,0,0
+,IBM Cloud VPC with misconfigured flow logs exposing network metadata.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,0,1,0
+,Alibaba Cloud RDS with misconfigured parameter group exposing sensitive settings.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS SNS with misconfigured delivery policy exposing messages.,Data Exposure,AWS,25,1,0,0,1,0,0,1,0,0
+,Azure Virtual Machine with misconfigured disk encryption exposing data.,Encryption,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud SQL with misconfigured backup configuration exposing data.,Data Exposure,GCP,55,1,1,0,1,0,0,0,1,0
+,Oracle Cloud File Storage with misconfigured access policy allowing data tampering.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,1,0,0
+,IBM Cloud Kubernetes with misconfigured resource limits allowing DoS attacks.,Denial of Service,IBM Cloud,10,1,0,0,0,1,0,0,0,0
+,Alibaba Cloud OSS with misconfigured bucket versioning allowing data exposure.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,1,0
+,AWS EKS with misconfigured network policy allowing lateral movement.,Network Security,AWS,0,1,0,0,0,0,0,1,0,0
+,Azure API Management with misconfigured rate limiting allowing DoS attacks.,Denial of Service,Azure,10,1,0,0,0,1,0,0,0,0
+,GCP Cloud Run with misconfigured service account allowing privilege escalation.,Privilege Escalation,GCP,25,1,0,1,0,0,0,0,0,0
+,Oracle Cloud Load Balancer with misconfigured session persistence exposing sessions.,Session Management,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud VPC with misconfigured public gateway allowing unauthorized access.,Access Control,IBM Cloud,30,1,1,0,0,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured maintenance window allowing DoS attacks.,Denial of Service,Alibaba Cloud,10,1,0,0,0,1,0,0,0,0
+,AWS SNS with misconfigured message attributes exposing sensitive data.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Virtual Network with misconfigured service endpoint allowing data exfiltration.,Data Exfiltration,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud SQL with misconfigured user privileges allowing unauthorized access.,Access Control,GCP,25,1,0,1,0,0,0,0,0,0
+,Oracle Cloud File Storage with misconfigured mount target allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Databases with misconfigured backup retention exposing data.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,0,1,0
+,Alibaba Cloud ECS with misconfigured snapshot policy allowing data exposure.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,1,0,0
+,AWS Lambda with misconfigured function policy allowing unauthorized invocation.,Access Control,AWS,0,1,0,0,0,0,0,1,0,0
+,Azure Kubernetes with misconfigured RBAC policy allowing privilege escalation.,Privilege Escalation,Azure,50,1,0,1,1,0,0,1,0,0
+,GCP Cloud Run with misconfigured environment variables exposing secrets.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud Load Balancer with misconfigured backend set allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Functions with misconfigured trigger policy allowing unauthorized invocation.,Access Control,IBM Cloud,0,1,0,0,0,0,0,1,0,0
+,Alibaba Cloud OSS with misconfigured CORS policy allowing data exfiltration.,Data Exfiltration,Alibaba Cloud,0,1,0,0,0,0,0,1,1,0
+,AWS API Gateway with misconfigured throttling policy allowing DoS attacks.,Denial of Service,AWS,10,1,0,0,0,1,0,1,0,0
+,Azure App Service with misconfigured authentication exposing sessions.,Session Management,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Storage with misconfigured bucket policy allowing data exposure.,Data Exposure,GCP,25,1,0,0,1,0,0,1,1,0
+,Oracle Cloud Database with misconfigured encryption policy exposing data.,Encryption,Oracle Cloud,0,1,0,0,0,0,0,1,0,0
+,AWS ECS with misconfigured container port exposing internal services.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Function with misconfigured CORS policy allowing data exfiltration.,Data Exfiltration,Azure,0,1,0,0,0,0,0,1,0,0
+,GCP Cloud Run with misconfigured CPU limit allowing resource exhaustion.,Denial of Service,GCP,10,1,0,0,0,1,0,0,0,0
+,Oracle Cloud Compute with misconfigured instance type allowing DoS attacks.,Denial of Service,Oracle Cloud,10,1,0,0,0,1,0,0,0,0
+,IBM Cloud Object Storage with misconfigured bucket encryption exposing data.,Encryption,IBM Cloud,0,1,0,0,0,0,0,0,1,0
+,Alibaba Cloud SLB with misconfigured listener exposing internal endpoints.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS S3 bucket with misconfigured object ACL allowing data exposure.,Data Exposure,AWS,25,1,0,0,1,0,0,0,1,0
+,Azure SQL Database with misconfigured auditing exposing query logs.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Functions with misconfigured IAM role allowing privilege escalation.,Privilege Escalation,GCP,25,1,0,1,0,0,0,1,0,0
+,Oracle Cloud VCN with misconfigured NAT gateway allowing data exfiltration.,Data Exfiltration,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured network policy allowing unauthorized access.,Access Control,IBM Cloud,0,1,0,0,0,0,0,1,0,0
+,Alibaba Cloud RDS with misconfigured binary log exposing data.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS API Gateway with misconfigured caching exposing sensitive data.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Cosmos DB with misconfigured indexing policy allowing unauthorized queries.,Access Control,Azure,0,1,0,0,0,0,0,1,0,0
+,GCP Cloud Storage with misconfigured lifecycle rule exposing archived data.,Data Exposure,GCP,25,1,0,0,1,0,0,0,1,0
+,Oracle Cloud Database with misconfigured TDE exposing data.,Encryption,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Functions with misconfigured concurrency limit allowing DoS attacks.,Denial of Service,IBM Cloud,10,1,0,0,0,1,0,0,0,0
+,Alibaba Cloud OSS with misconfigured access policy allowing data tampering.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,1,1,0
+,AWS CloudTrail with misconfigured S3 bucket policy exposing logs.,Data Exposure,AWS,25,1,0,0,1,0,0,1,1,0
+,Azure Virtual Machine with misconfigured public IP allowing unauthorized access.,Access Control,Azure,30,1,1,0,0,0,0,0,0,0
+,GCP Cloud Functions with misconfigured event trigger allowing unauthorized invocation.,Access Control,GCP,0,1,0,0,0,0,0,0,1,0
+,Oracle Cloud Load Balancer with misconfigured listener allowing protocol downgrade.,Encryption,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud VPC with misconfigured subnet routing allowing traffic interception.,Network Security,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured metadata endpoint exposing credentials.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS EKS with misconfigured service account token allowing privilege escalation.,Privilege Escalation,AWS,50,1,0,1,1,0,0,0,0,0
+,Azure API Management with misconfigured backend exposing internal services.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud SQL with misconfigured backup policy exposing data.,Data Exposure,GCP,55,1,1,0,1,0,0,1,1,0
+,Oracle Cloud Identity with misconfigured group policy allowing privilege escalation.,Privilege Escalation,Oracle Cloud,25,1,0,1,0,0,0,1,0,0
+,IBM Cloud Functions with misconfigured rate limiting allowing DoS attacks.,Denial of Service,IBM Cloud,10,1,0,0,0,1,0,0,0,0
+,Alibaba Cloud OSS with misconfigured bucket versioning exposing deleted objects.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,1,0
+,AWS SNS with misconfigured delivery policy causing message loss.,Data Loss,AWS,0,1,0,0,0,0,0,1,0,0
+,Azure Event Hub with misconfigured SAS token exposing data.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP BigQuery with misconfigured view access allowing unauthorized queries.,Access Control,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud Object Storage with misconfigured CORS policy allowing data exfiltration.,Data Exfiltration,Oracle Cloud,0,1,0,0,0,0,0,1,1,0
+,IBM Cloud Kubernetes with misconfigured pod affinity causing resource exhaustion.,Denial of Service,IBM Cloud,10,1,0,0,0,1,0,0,0,0
+,Alibaba Cloud ECS with misconfigured instance type causing DoS attacks.,Denial of Service,Alibaba Cloud,10,1,0,0,0,1,0,0,0,0
+,AWS CloudFormation with misconfigured stack policy allowing unauthorized updates.,Access Control,AWS,0,1,0,0,0,0,0,1,0,0
+,Azure Machine Learning with misconfigured endpoint exposing model data.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Monitoring with misconfigured dashboard exposing sensitive metrics.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud Functions with misconfigured IAM policy allowing unauthorized invocation.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,1,0,0
+,IBM Cloud VPC with misconfigured security group allowing unauthorized access.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured snapshot policy exposing data.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,1,0,0
+,AWS Redshift with misconfigured cluster parameter exposing data.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Data Lake with misconfigured filesystem access allowing data tampering.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Composer with misconfigured environment variable allowing code injection.,Code Injection,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud VCN with misconfigured security group allowing lateral movement.,Network Security,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured resource quota causing DoS attacks.,Denial of Service,IBM Cloud,10,1,0,0,0,1,0,0,0,0
+,Alibaba Cloud OSS with misconfigured bucket encryption policy exposing data.,Encryption,Alibaba Cloud,0,1,0,0,0,0,0,1,1,0
+,AWS S3 bucket with misconfigured lifecycle transition exposing data.,Data Exposure,AWS,25,1,0,0,1,0,0,0,1,0
+,Azure Stream Analytics with misconfigured job output allowing data exfiltration.,Data Exfiltration,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud Armor with misconfigured rate limiting allowing DoS attacks.,Denial of Service,GCP,10,1,0,0,0,1,0,0,0,0
+,Oracle Cloud File Storage with misconfigured export policy allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,1,0,0
+,IBM Cloud Databases with misconfigured connection pooling exposing credentials.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured firewall rule allowing unauthorized access.,Access Control,Alibaba Cloud,0,1,0,0,0,0,0,0,0,0
+,AWS ElastiCache with misconfigured Redis AUTH exposing data.,Authentication,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Databricks with misconfigured notebook allowing code injection.,Code Injection,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud VPN with misconfigured routing policy allowing traffic interception.,Network Security,GCP,0,1,0,0,0,0,0,1,0,0
+,Oracle Cloud Compute with misconfigured boot volume exposing data.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,0,0,0
+,IBM Cloud Functions with misconfigured trigger policy allowing unauthorized invocation.,Access Control,IBM Cloud,0,1,0,0,0,0,0,1,0,0
+,Alibaba Cloud OSS with misconfigured bucket logging exposing request metadata.,Data Exposure,Alibaba Cloud,55,1,1,0,1,0,0,0,1,0
+,AWS CodeBuild with misconfigured source repository allowing code injection.,Code Injection,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Cognitive Services with misconfigured API key exposing sensitive data.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Spanner with misconfigured backup policy exposing data.,Data Exposure,GCP,55,1,1,0,1,0,0,1,1,0
+,Oracle Cloud API Gateway with misconfigured authentication allowing unauthorized access.,Authentication,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Security Group with misconfigured protocol allowing unauthorized access.,Access Control,IBM Cloud,0,1,0,0,0,0,0,0,0,0
+,Alibaba Cloud ECS with misconfigured monitoring exposing instance metrics.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS S3 bucket with misconfigured notification policy allowing unauthorized actions.,Access Control,AWS,30,1,1,0,0,0,0,1,1,0
+,Azure Virtual Network with misconfigured DNS settings allowing domain hijacking.,Domain Hijacking,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud DNS with misconfigured zone transfer exposing data.,Data Exposure,GCP,25,1,0,0,1,0,0,0,0,0
+,Oracle Cloud Identity with misconfigured compartment policy allowing privilege escalation.,Privilege Escalation,Oracle Cloud,25,1,0,1,0,0,0,1,0,0
+,IBM Cloud VPC with misconfigured flow log policy exposing network traffic.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,1,1,0
+,Alibaba Cloud RDS with misconfigured user permissions allowing data tampering.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,1,0,0
+,AWS SNS with misconfigured topic subscription allowing data exfiltration.,Data Exfiltration,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure Virtual Machine with misconfigured extension allowing code execution.,Code Injection,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud SQL with misconfigured maintenance window allowing DoS attacks.,Denial of Service,GCP,10,1,0,0,0,1,0,0,0,0
+,Oracle Cloud File Storage with misconfigured access control allowing data tampering.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,0,0,0
+,IBM Cloud Kubernetes with misconfigured pod security context allowing privilege escalation.,Privilege Escalation,IBM Cloud,25,1,0,1,0,0,0,0,0,0
+,Alibaba Cloud OSS with misconfigured bucket policy allowing unauthorized access.,Access Control,Alibaba Cloud,0,1,0,0,0,0,0,1,1,0
+,AWS EKS with misconfigured logging policy exposing sensitive data.,Data Exposure,AWS,55,1,1,0,1,0,0,1,1,0
+,Azure API Management with misconfigured subscription policy allowing unauthorized access.,Access Control,Azure,0,1,0,0,0,0,0,1,0,0
+,GCP Cloud Run with misconfigured service account allowing privilege escalation.,Privilege Escalation,GCP,25,1,0,1,0,0,0,0,0,0
+,Oracle Cloud Load Balancer with misconfigured routing policy allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,1,0,0
+,IBM Cloud VPC with misconfigured public gateway allowing unauthorized access.,Access Control,IBM Cloud,30,1,1,0,0,0,0,0,0,0
+,Alibaba Cloud RDS with misconfigured maintenance policy allowing DoS attacks.,Denial of Service,Alibaba Cloud,10,1,0,0,0,1,0,1,0,0
+,AWS SNS with misconfigured message filtering exposing sensitive data.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Virtual Network with misconfigured service endpoint allowing data exfiltration.,Data Exfiltration,Azure,0,1,0,0,0,0,0,0,0,0
+,GCP Cloud SQL with misconfigured user authentication allowing unauthorized access.,Authentication,GCP,0,1,0,0,0,0,0,0,0,0
+,Oracle Cloud File Storage with misconfigured mount target allowing unauthorized access.,Access Control,Oracle Cloud,0,1,0,0,0,0,0,0,0,0
+,IBM Cloud Databases with misconfigured backup policy exposing data.,Data Exposure,IBM Cloud,25,1,0,0,1,0,0,1,1,0
+,Alibaba Cloud ECS with misconfigured snapshot policy allowing data exposure.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,1,0,0
+,AWS Lambda with misconfigured environment variables exposing secrets.,Data Exposure,AWS,25,1,0,0,1,0,0,0,0,0
+,Azure Kubernetes with misconfigured pod security policy allowing privilege escalation.,Privilege Escalation,Azure,25,1,0,1,0,0,0,1,0,0
+,GCP Cloud Functions with misconfigured trigger policy allowing unauthorized invocation.,Access Control,GCP,0,1,0,0,0,0,0,1,0,0
+,Oracle Cloud Database with misconfigured listener exposing data.,Data Exposure,Oracle Cloud,25,1,0,0,1,0,0,0,0,0
+,IBM Cloud Object Storage with misconfigured CORS policy allowing data exfiltration.,Data Exfiltration,IBM Cloud,0,1,0,0,0,0,0,1,1,0
+,Alibaba Cloud SLB with misconfigured health check exposing backend services.,Data Exposure,Alibaba Cloud,25,1,0,0,1,0,0,0,0,0
+,AWS API Gateway with misconfigured authorizer allowing unauthorized access.,Authentication,AWS,0,1,0,0,0,0,0,0,0,0
+,Azure App Service with misconfigured environment variables exposing secrets.,Data Exposure,Azure,25,1,0,0,1,0,0,0,0,0
+,GCP Cloud Storage with misconfigured object versioning exposing deleted data.,Data Exposure,GCP,25,1,0,0,1,0,0,0,1,0
+,Oracle Cloud VCN with misconfigured route table allowing traffic interception.,Network Security,Oracle Cloud,0,1,0,0,0,0,0,0,0,0

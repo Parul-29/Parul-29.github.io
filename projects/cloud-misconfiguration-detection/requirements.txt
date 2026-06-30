@@ -1,0 +1,18 @@
+# Core Data Science Libraries
+pandas>=2.3.3
+numpy>=2.3.3
+
+# Machine Learning
+scikit-learn>=1.7.2
+xgboost>=3.1.2
+imbalanced-learn>=0.14.0
+
+# Visualization
+matplotlib>=3.10.7
+seaborn>=0.13.2
+
+# Model Persistence
+joblib>=1.5.2
+
+# Interpretability
+shap>=0.50.0

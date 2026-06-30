@@ -1,0 +1,36 @@
+{
+  "platform_name": "commerce-platform",
+  "environment": "staging",
+  "aws_region": "us-west-2",
+  "eks_cluster": "commerce-staging-eks",
+  "vpc_id": "vpc-0123456789abcdef0",
+  "services": [
+    {
+      "name": "orders-api",
+      "image": "123456789012.dkr.ecr.us-west-2.amazonaws.com/orders-api:v1",
+      "replicas": 3,
+      "cpu_millicores": 500,
+      "memory_mb": 1024,
+      "port": 8080,
+      "exposure": "internal",
+      "autoscaling_enabled": true
+    },
+    {
+      "name": "frontend-gateway",
+      "image": "123456789012.dkr.ecr.us-west-2.amazonaws.com/frontend-gateway:v1",
+      "replicas": 2,
+      "cpu_millicores": 250,
+      "memory_mb": 512,
+      "port": 443,
+      "exposure": "public",
+      "autoscaling_enabled": true
+    }
+  ],
+  "enable_observability": true,
+  "enable_kms_encryption": true,
+  "enable_irsa": true,
+  "metadata": {
+    "owner": "platform-engineering",
+    "cost_center": "cloud-platform"
+  }
+}
