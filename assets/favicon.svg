@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="PI">
+  <defs>
+    <linearGradient id="pi-gradient" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6658bd"/>
+      <stop offset=".5" stop-color="#b94b78"/>
+      <stop offset="1" stop-color="#007f83"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="url(#pi-gradient)"/>
+  <text
+    x="32"
+    y="38"
+    fill="#ffffff"
+    font-family="Inter, Segoe UI, Arial, sans-serif"
+    font-size="22"
+    font-weight="800"
+    text-anchor="middle"
+    letter-spacing="0">PI</text>
+</svg>
