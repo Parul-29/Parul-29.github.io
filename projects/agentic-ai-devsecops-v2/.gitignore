@@ -1,0 +1,6 @@
+# Local secrets and Python build artifacts
+.env
+.venv/
+__pycache__/
+*.py[cod]
+
