@@ -27,12 +27,13 @@ class Orchestrator:
 
         agent_results = await asyncio.gather(*(agent.execute(request) for agent in self.agents))
         findings = self._dedupe_findings(agent_results)
-        reasoning = await self.reasoning_agent.enrich(findings)
+        reasoning, reasoning_provider = await self.reasoning_agent.enrich(findings)
 
         scan.status = ScanStatus.completed
         scan.agent_results = agent_results
         scan.findings = sorted(findings, key=lambda item: item.risk_score, reverse=True)
         scan.reasoning = reasoning
+        scan.reasoning_provider = reasoning_provider
         scan.completed_at = datetime.now(timezone.utc)
         scan.errors = [error for result in agent_results for error in result.errors]
         return scan

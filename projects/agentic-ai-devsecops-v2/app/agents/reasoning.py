@@ -16,19 +16,24 @@ SEVERITY_BASE_SCORE = {
 
 
 class ReasoningAgent:
-    async def enrich(self, findings: list[Finding]) -> ReasoningSummary:
+    async def enrich(self, findings: list[Finding]) -> tuple[ReasoningSummary, str]:
         for finding in findings:
             finding.risk_score = self._score(finding)
             finding.route = self._route(finding)
 
         summary = None
+        provider = "deterministic"
 
         if findings and settings.llm_provider == "gemini":
             summary = await self._try_gemini_summary(findings)
+            if summary:
+                provider = "gemini"
         elif findings and settings.llm_provider == "ollama":
             summary = await self._try_ollama_summary(findings)
+            if summary:
+                provider = "ollama"
 
-        return summary or self._deterministic_summary(findings)
+        return summary or self._deterministic_summary(findings), provider
 
     def _score(self, finding: Finding) -> int:
         score = SEVERITY_BASE_SCORE[finding.severity]

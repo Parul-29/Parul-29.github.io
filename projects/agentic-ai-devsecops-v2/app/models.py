@@ -90,6 +90,7 @@ class ScanResponse(BaseModel):
     findings: list[Finding] = Field(default_factory=list)
     agent_results: list[AgentResult] = Field(default_factory=list)
     reasoning: ReasoningSummary | None = None
+    reasoning_provider: str = "deterministic"
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     completed_at: datetime | None = None
     errors: list[str] = Field(default_factory=list)
