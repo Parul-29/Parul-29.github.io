@@ -1,6 +1,7 @@
 import json
-
 import httpx
+import asyncio
+from google import genai
 
 from app.config import settings
 from app.models import ActionRoute, Finding, ReasoningSummary, Severity
@@ -20,12 +21,14 @@ class ReasoningAgent:
             finding.risk_score = self._score(finding)
             finding.route = self._route(finding)
 
-        if settings.ollama_enabled and findings:
-            llm_summary = await self._try_ollama_summary(findings)
-            if llm_summary:
-                return llm_summary
+        summary = None
 
-        return self._deterministic_summary(findings)
+        if findings and settings.llm_provider == "gemini":
+            summary = await self._try_gemini_summary(findings)
+        elif findings and settings.llm_provider == "ollama":
+            summary = await self._try_ollama_summary(findings)
+
+        return summary or self._deterministic_summary(findings)
 
     def _score(self, finding: Finding) -> int:
         score = SEVERITY_BASE_SCORE[finding.severity]
@@ -74,7 +77,7 @@ class ReasoningAgent:
             "format": "json",
         }
         try:
-            async with httpx.AsyncClient(timeout=20) as client:
+            async with httpx.AsyncClient(timeout=60) as client:
                 response = await client.post(f"{settings.ollama_base_url}/api/generate", json=payload)
                 response.raise_for_status()
                 data = response.json()
@@ -97,3 +100,27 @@ class ReasoningAgent:
             "medium_count: int, low_count: int, recommended_next_steps: string[]}. "
             f"Findings: {json.dumps(serialized)}"
         )
+
+    async def _try_gemini_summary(self, findings: list[Finding]) -> ReasoningSummary | None:
+        if not settings.gemini_api_key:
+            return None
+
+        try:
+            client = genai.Client(api_key=settings.gemini_api_key)
+
+            response = await asyncio.to_thread(
+                client.models.generate_content,
+                model=settings.gemini_model,
+                contents=self._build_prompt(findings),
+                config={
+                    "response_format": {
+                        "text": {
+                            "mime_type": "application/json",
+                            "schema": ReasoningSummary.model_json_schema(),
+                        }
+                    }
+                },
+            )
+            return ReasoningSummary.model_validate_json(response.text)
+        except Exception:
+            return None
