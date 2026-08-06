@@ -103,6 +103,7 @@ class ReasoningAgent:
 
     async def _try_gemini_summary(self, findings: list[Finding]) -> ReasoningSummary | None:
         if not settings.gemini_api_key:
+            print("Gemini reasoning skipped: GEMINI_API_KEY is missing")
             return None
 
         try:
@@ -122,5 +123,7 @@ class ReasoningAgent:
                 },
             )
             return ReasoningSummary.model_validate_json(response.text)
-        except Exception:
+
+        except Exception as exc:
+            print(f"Gemini reasoning failed: {exc}")
             return None
