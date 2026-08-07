@@ -1,7 +1,7 @@
 import json
 import httpx
 import asyncio
-from google import genai
+from google.genai import types
 
 from app.config import settings
 from app.models import ActionRoute, Finding, ReasoningSummary, Severity
@@ -100,9 +100,8 @@ class ReasoningAgent:
             for finding in findings
         ]
         return (
-            "You are a DevSecOps reasoning agent. Return strict JSON matching this schema: "
-            "{executive_summary: string, total_findings: int, critical_count: int, high_count: int, "
-            "medium_count: int, low_count: int, recommended_next_steps: string[]}. "
+            "Summarize these DevSecOps findings. Prioritize practical remediation "
+            "steps and return only the requested structured result. "
             f"Findings: {json.dumps(serialized)}"
         )
 
@@ -118,14 +117,10 @@ class ReasoningAgent:
                 client.models.generate_content,
                 model=settings.gemini_model,
                 contents=self._build_prompt(findings),
-                config={
-                    "response_format": {
-                        "text": {
-                            "mime_type": "application/json",
-                            "schema": ReasoningSummary.model_json_schema(),
-                        }
-                    }
-                },
+                config=types.GenerateContentConfig(
+                    response_mime_type="application/json",
+                    response_schema=ReasoningSummary,
+                ),
             )
             return ReasoningSummary.model_validate_json(response.text)
 
