@@ -38,7 +38,14 @@ class ComplianceCheckerAgent(Agent):
             )
 
         for path, content in request.source_snapshot.items():
-            if path.lower().endswith((".yml", ".yaml")) and "permissions:" not in content:
+            normalized_path = path.replace("\\", "/").lower()
+            if normalized_path.startswith("./"):
+                normalized_path = normalized_path[2:]
+            is_github_workflow = (
+                normalized_path.startswith(".github/workflows/")
+                and normalized_path.endswith((".yml", ".yaml"))
+            )
+            if is_github_workflow and "permissions:" not in content:
                 findings.append(
                     Finding(
                         agent=self.name,
