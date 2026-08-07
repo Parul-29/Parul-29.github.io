@@ -1,11 +1,15 @@
-import json
-import httpx
 import asyncio
+import json
+import logging
+
+import httpx
+from google import genai
 from google.genai import types
 
 from app.config import settings
 from app.models import ActionRoute, Finding, ReasoningSummary, Severity
 
+logger = logging.getLogger(__name__)
 
 SEVERITY_BASE_SCORE = {
     Severity.low: 25,
@@ -23,6 +27,8 @@ class ReasoningAgent:
 
         summary = None
         provider = "deterministic"
+
+        logger.warning("Configured LLM provider: %s", settings.llm_provider)
 
         if findings and settings.llm_provider == "gemini":
             summary = await self._try_gemini_summary(findings)
@@ -64,7 +70,8 @@ class ReasoningAgent:
         return ReasoningSummary(
             executive_summary=(
                 f"Scan completed with {len(findings)} findings. "
-                f"{counts[Severity.critical]} critical and {counts[Severity.high]} high findings require priority attention."
+                f"{counts[Severity.critical]} critical and "
+                f"{counts[Severity.high]} high findings require priority attention."
             ),
             total_findings=len(findings),
             critical_count=counts[Severity.critical],
@@ -81,24 +88,37 @@ class ReasoningAgent:
             "prompt": self._build_prompt(findings),
             "format": "json",
         }
+
         try:
             async with httpx.AsyncClient(timeout=60) as client:
-                response = await client.post(f"{settings.ollama_base_url}/api/generate", json=payload)
+                response = await client.post(
+                    f"{settings.ollama_base_url}/api/generate",
+                    json=payload,
+                )
                 response.raise_for_status()
                 data = response.json()
                 content = json.loads(data.get("response", "{}"))
                 return ReasoningSummary.model_validate(content)
         except Exception:
+            logger.exception("Ollama reasoning failed")
             return None
 
     def _build_prompt(self, findings: list[Finding]) -> str:
         serialized = [
             finding.model_dump(
                 mode="json",
-                include={"title", "severity", "category", "risk_score", "confidence", "recommendation"},
+                include={
+                    "title",
+                    "severity",
+                    "category",
+                    "risk_score",
+                    "confidence",
+                    "recommendation",
+                },
             )
             for finding in findings
         ]
+
         return (
             "Summarize these DevSecOps findings. Prioritize practical remediation "
             "steps and return only the requested structured result. "
@@ -107,7 +127,7 @@ class ReasoningAgent:
 
     async def _try_gemini_summary(self, findings: list[Finding]) -> ReasoningSummary | None:
         if not settings.gemini_api_key:
-            print("Gemini reasoning skipped: GEMINI_API_KEY is missing")
+            logger.warning("Gemini reasoning skipped: GEMINI_API_KEY is missing")
             return None
 
         try:
@@ -122,8 +142,9 @@ class ReasoningAgent:
                     response_schema=ReasoningSummary,
                 ),
             )
+
             return ReasoningSummary.model_validate_json(response.text)
 
-        except Exception as exc:
-            print(f"Gemini reasoning failed: {exc}")
+        except Exception:
+            logger.exception("Gemini reasoning failed")
             return None
